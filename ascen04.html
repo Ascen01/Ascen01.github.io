@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://github.com/Ascen01/Ascen01.github.io/main/pic/FUMA.ico" />
+    <link rel="stylesheet" href="http://raw.githack.com/Ascen01/Ascen01.github.io/main/ascen04.css">
+    <link
+        href="https://fonts.googlefonts.cn/css?family=Anton|Archivo+Black|Do+Hyeon|Oswald|Passion+One|Righteous|Roboto+Condensed|Russo+One|Teko"
+        rel="stylesheet">
+    <script type="text/javascript" src="ascen04.js"></script>
+    <title>ASCEN</title>
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            background-color: #efefef;
+        }
+
+        .as {
+            width: 1260px;
+            margin: auto;
+
+        }
+
+
+        .a {
+            float: left;
+            height: 400px;
+            width: 1260px;
+            background-color: #d6ff41;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .a .a1 {
+            float: left;
+            height: 250px;
+            width: 680PX;
+            padding: 50px 50px 0px 100px;
+            background: none;
+            line-height: 80px;
+            font-size: 76px;
+            font-family: 'Russo One', sans-serif;
+            font-weight: bolder;
+            letter-spacing: 0.05em;
+        }
+
+        .a .a1 .a11 {
+            background: none;
+        }
+
+        .a .a1 .a12 {
+            background: none;
+        }
+
+        .a .a1 .a13 {
+            background: none;
+        }
+
+        .a .a2 {
+            float: right;
+            height: 300px;
+            width: 320PX;
+            padding: 0px 50px 0px 50px;
+            background: none;
+        }
+
+
+
+        .a .a2 .a21 {
+            float: left;
+            height: 180px;
+            width: 220PX;
+            padding: 40px 50px 0px 50px;
+            background: none;
+
+        }
+
+        .a .a2 .a21 img {
+            float: left;
+            height: 160px;
+            width: 160PX;
+            background: none;
+            border-radius: 15%;
+            box-shadow: -3px 3px 10px #00000068;
+            cursor: pointer;
+        }
+
+        .a .a2 .a21 img:hover {
+            filter: brightness(1.1)
+        }
+
+        .a .a2 .a22 {
+            float: left;
+            height: 30px;
+            width: 220px;
+            text-align: center;
+            line-height: 0px;
+            padding: 0px 50px 0px 20px;
+            background: none;
+        }
+
+        .a .a2 .a23 {
+            float: left;
+            height: 50px;
+            width: 220px;
+            text-align: center;
+            line-height: 50px;
+            padding: 0px 50px 0px 10px;
+            background: none;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 0.02em;
+            font-size: 36px;
+            font-weight: bolder;
+        }
+
+        .a .a3 {
+            float: left;
+            height: 100px;
+            width: 1180px;
+            padding: 0px 50px 0px 50px;
+            background: none;
+        }
+
+        .a .a3 .a31 {
+            float: left;
+            height: 0px;
+            width: 1030px;
+            border: 4px solid rgb(0, 0, 0);
+            margin: 40px 0px 0px 50px;
+            background: none;
+        }
+
+        .a .a3 .a32 {
+            float: left;
+            height: 24px;
+            width: 24px;
+            border: 4px solid rgb(0, 0, 0);
+            border-radius: 50%;
+            margin: 30px 50px 0px -2px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .a4 {
+            top: 200px;
+            right: 3px;
+            position: fixed;
+            float: left;
+            width: 80px;
+            height: 150px;
+            background-color: #8894ff00;
+
+        }
+
+        .a41,
+        .a42 {
+            width: 80px;
+            height: auto;
+            background: none;
+            margin: 0px 0px 80px 0px;
+            position: relative;
+        }
+
+        .a41 a,
+        .a42 a {
+            width: 80px;
+            height: auto;
+            background: none;
+        }
+
+        .a41 .img01,
+        .a42 .img01,
+        .a41 .img02,
+        .a42 .img02 {
+            width: 80px;
+            height: auto;
+            background: none;
+            position: absolute;
+            top: -156px;
+            left: -10px;
+        }
+
+        .a41 .img02:hover {
+            opacity: 0;
+        }
+
+        .a42 .img02:hover {
+            opacity: 0;
+        }
+
+        .b {
+            float: left;
+            height: 100px;
+            width: 1260px;
+            background-color: #000000;
+            margin: 0px 0px 0px 0px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* 开始 */
+
+        .items {
+            width: auto;
+            color: #d6ff41;
+            cursor: pointer;
+            height: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu {
+            float: left;
+            width: auto;
+            height: 100px;
+            background: rgb(0, 0, 0);
+            position: relative;
+            overflow: hidden;
+            padding: 0px 20px 0px 20px;
+            color: #d6ff41;
+        }
+
+        .items:hover {
+            overflow: visible;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            z-index: 888;
+            cursor: pointer;
+        }
+
+        .drop {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+        }
+
+        .drop a {
+            font-size: 16px;
+            background: none;
+            color: white;
+        }
+
+        .drop:hover {
+            background: #6877fd;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* 结束 */
+
+
+
+        .b .b11 {
+            float: left;
+            width: 36px;
+            height: 64px;
+            line-height: 64px;
+            padding: 0px 0px 0px 0px;
+            font-size: 50px;
+            font-family: 'Archivo Black', sans-serif;
+            font-weight: bolder;
+            background: none;
+        }
+
+        .b .b12 {
+            float: right;
+            padding: 0px 0px 0px 0px;
+            width: auto;
+            height: 74px;
+            line-height: 74px;
+            font-size: 36px;
+            font-family: 'Anton', sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            background: none;
+        }
+
+        .b .b12:hover {
+            color: #8893ff;
+        }
+
+        .b .b13 {
+            width: auto;
+            height: 0px;
+            line-height: 0px;
+            padding: 0px 0px 0px 0px;
+            font-size: 16px;
+            text-align: center;
+            background: none;
+        }
+
+        .b .menu:hover {
+            color: #8893ff;
+        }
+
+        .b .menu:hover~.b11 {
+            color: #8893ff;
+        }
+
+        .b .menu:hover~.b12 {
+            color: #8893ff;
+        }
+
+        .b .menu:hover~.b13 {
+            color: #8893ff;
+        }
+
+
+
+        .c1 .c11 {
+            float: left;
+            padding: 30px 0px 5px 40px;
+            width: 1220px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 30px;
+            font-family: 'Anton', sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            background-color: rgba(0, 255, 255, 0);
+        }
+
+        .c1 .c12 {
+            float: left;
+            height: 0px;
+            width: 200px;
+            border: 7px solid #d6ff41;
+            margin: 10px 0px 0px 40px;
+            background: none;
+            z-index: 777;
+        }
+
+        .c1 .c13 {
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            width: 1000px;
+            margin: 10px 0px 30px 40px;
+            font-size: 20px;
+            background: none
+        }
+
+        .e1 {
+            float: left;
+            height: 240px;
+            width: 1060px;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 60px 100px 60px 100px;
+        }
+
+        .e1 .e11 {
+            float: left;
+            width: 240px;
+            height: 240px;
+            background-color: #ffffff;
+            top: 0px;
+            left: 0px;
+            border-radius: 50%;
+            position: relative;
+            margin: 0px 30px 0px 40px;
+            transition: 2s;
+        }
+
+        .e1 .e11 img {
+            float: left;
+            width: 200px;
+            background-color: #ffffff00;
+            position: relative;
+            top: 20px;
+            right: -20px;
+            transition: 2s;
+        }
+
+        .e1 .e10 {
+            float: left;
+            background: #8894ff00;
+            width: 320px;
+            height: 300px;
+        }
+
+        .e1 .e10 .e101 {
+            padding: 16px 118px 0px 117px;
+            float: left;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background: none;
+            font-size: 20px;
+
+        }
+
+
+        .e1 .e11:hover {
+            cursor: pointer;
+            border: 8px dashed #000000;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+            transform: rotate(360deg)scale(0.9);
+        }
+
+        .e1 .e11 img:hover {
+            transform: rotate(360deg)scale(1);
+            filter: brightness(1.1);
+        }
+
+        .d21 {
+            float: left;
+            width: 1260px;
+            height: 70px;
+            background-color: #ffffff00;
+        }
+
+        .d211,
+        .d212 {
+            width: 180px;
+            height: auto;
+            background: none;
+            margin: 0px 0px 0px 0px;
+            position: relative;
+        }
+
+        .d211 img,
+        .d212 img {
+            float: left;
+            width: 180px;
+            background: none;
+            position: relative;
+            top: -10px;
+            left: 900px;
+            transition: 3s;
+        }
+
+        .d212 img {
+            position: absolute;
+            filter: opacity(0);
+
+        }
+
+
+        .d22 img {
+            float: left;
+            width: 1260px;
+            background: none;
+            position: relative;
+            right: 33.5px;
+        }
+
+
+        .d212 img:hover {
+            cursor: pointer;
+            transform: rotate(720deg)scale(1);
+            filter: opacity(1);
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <div class="all">
+        <div class="a"><!-- 导航栏上方 -->
+            <span class="a1">
+                <ul class="a11">PERSONAL</ul>
+                <ul class="a12">DESIGN WORKS</ul>
+                <ul class="a13">COLLECTION</ul>
+            </span>
+            <span class="a2" id="img-a42">
+                <ul class="a21"><img src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/ma.png?raw=true"
+                        alt="加载错误，请再试一次！" title="点击右键保存图片"></ul>
+                <!-- 图片：微信二维码.ma -->
+                <ul class="a22">扫一扫，添加微信了解更多</ul>
+                <ul class="a23">——FROM ASCEN</ul>
+            </span>
+            <span class="a3">
+                <ul class="a31"></ul>
+                <ul class="a32"></ul>
+            </span>
+            <span class="a4">
+                <ul class="a41">
+                    <a href="#img-a42"><img class="img01"
+                            src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/fu1.png?raw=true"
+                            alt="加载错误，请再试一次！" title="返回顶端"></a> <!-- 图片：TOP.fu1 -->
+                    <a href="#img-a42"><img class="img02"
+                            src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/fu11.png?raw=true"
+                            alt="加载错误，请再试一次！" title="返回顶端"></a> <!-- 图片：TOP.fu11 -->
+
+                </ul>
+                <ul class="a42">
+                    <a href="#img-a41"><img class="img01"
+                            src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/fu22.png?raw=true"
+                            alt="加载错误，请再试一次！" title="返回底部"></a> <!-- 图片：BTM.fu22 -->
+                    <a href="#img-a41"><img class="img02"
+                            src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/fu2.png?raw=true"
+                            alt="加载错误，请再试一次！" title="返回底部"></a> <!-- 图片：BTM.fu2 -->
+                </ul>
+            </span>
+        </div>
+        <section class="b"><!-- 导航栏 -->
+
+            <div id="go01" class="items" onclick="sub01()">
+                <span class="menu">
+                    <ul class="b11">●</ul>
+                    <ul class="b12">
+                        PROFILE
+                    </ul>
+                    <ul class="b13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;简介</ul>
+                </span>
+            </div>
+
+            <div class="items">
+                <span class="menu">
+                    <ul class="b11">○</ul>
+                    <ul class="b12">E-COMMERCE</ul>
+                    <ul class="b13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电商设计</ul>
+                </span>
+                <div>
+                    <div class="drop"><a
+                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/ascen02.html">国内电商</a>
+                    </div>
+                    <div class="drop"><a
+                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/ascen03.html">国外电商</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="go03" class="items" onclick="sub03()">
+                <span class="menu">
+                    <ul class="b11">○</ul>
+                    <ul class="b12">POSTER</ul>
+                    <ul class="b13">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;品牌设计
+                    </ul>
+                </span>
+            </div>
+
+            <div id="go04" class="items" onclick="sub04()">
+                <span class="menu">
+                    <ul class="b11">○</ul>
+                    <ul class="b12">POSTER</ul>
+                    <ul class="b13">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;海报设计
+                    </ul>
+                </span>
+            </div>
+
+        </section>
+        <div class="c1"><!-- 声明 -->
+            <ul class="c11">内容概述:</ul>
+            <ul class="c12"></ul>
+            <ul class="c13">●品牌设计宗旨: 塑造品牌价值、深化品牌印象。此处作品主要包含名片设计等相关物LOGO设计、包装设计、画册设计、海报设计、
+                料VI设计。</ul>
+            <div class="e1"><!-- 选项图标 -->
+                <span class="e10"><!-- 图片：酒店logo.brand1 -->
+                    <ul class="e11">
+                        <img src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/brand1.png?raw=true"
+                            alt="加载错误，请再试一次！">
+                    </ul>
+                    <ul class="e101">酒店系列</ul>
+                </span>
+                <span class="e10"><!-- 图片：美食logo.brand2 -->
+                    <ul class="e11">
+                        <img src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/brand2.png?raw=true"
+                            alt="加载错误，请再试一次！">
+                    </ul>
+
+                    <ul class="e101">餐饮系列</ul>
+                </span>
+                <span class="e10"><!-- 图片：旅行logo.brand3 -->
+                    <ul class="e11">
+                        <img src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/brand3.png?raw=true"
+                            alt="加载错误，请再试一次！">
+                    </ul>
+                    <ul class="e101">旅游系列</ul>
+                </span>
+
+            </div>
+
+            <div class="d2">
+                <!-- 图片：齿轮.chi3 -->
+                <!-- 图片：齿轮.chi3 -->
+                <span class="d21">
+                    <ul class="d211"> <img
+                            src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/chi3.png?raw=true"
+                            alt="加载错误，请再试一次！"></ul>
+                    <ul class="d212"><img
+                            src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/chi3.png?raw=true">
+                    </ul>
+                </span>
+                <!-- 图片：品牌设计系列.di2 -->
+                <span class="d22" id="img-a41">
+                    <img src="https://github.com/Ascen01/Ascen01.github.io/blob/main/pic/di2.png?raw=true"
+                        alt="加载错误，请再试一次！">
+                </span>
+            </div>
+</body>
+
+<script>
+
+    function sub01() {
+        window.location.href = "https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/ascen01.html";
+    }
+
+    function sub02() {
+        window.location.href = "https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/ascen02.html";
+    }
+
+    function sub03() {
+        window.location.href = "https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/ascen04.html";
+    }
+
+    function sub04() {
+        window.location.href = "https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/ascen05.html";
+    }
+
+</script>
+
+
+</html>
