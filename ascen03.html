@@ -12,8 +12,7 @@
     <script type="text/javascript" src="ascen03.js"></script>
     <title>ASCEN</title>
 
-<style>
-    * {
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -292,6 +291,7 @@
     background: none;
 }
 
+
 .b .menu:hover {
     color: #8893ff;
 }
@@ -358,17 +358,27 @@
     padding: 60px 60px 0px 80px;
 }
 
+@font-face {
+    font-family: guang;
+    src: url(./font/guang.ttf);
+}
 
-.d11 .d111,
-.d11 .d112 {
+.d11 .d111 {
     float: left;
     width: 520px;
     height: 50px;
     background-color: #41a3ff00;
+    font-size: 32px;
+    font-family: guang;
+}
+
+.d11 .d112 {
+    float: left;
+    width: 520px;
+    height: 94px;
+    background-color: #d941ff00;
+    font-family: guang;
     font-size: 50px;
-    font-family: 'Do Hyeon', sans-serif;
-    font-weight: bolder;
-    padding: 0px 0px 20px 0px;
 }
 
 .d11 .d111:hover {
@@ -386,7 +396,6 @@
     width: 520px;
     height: 90px;
     background-color: #d6ff4100;
-    padding: 20px 0px 0px 0px;
 }
 
 .d11 .d113 .d1131 {
@@ -396,10 +405,10 @@
     line-height: 50px;
     text-align: center;
     background-color: #ffffff;
-    font-size: 20px;
+    font-size: 30px;
     transform: translate(0%, 0%);
-    font-weight: bold;
     margin: 0px 30px 0px 0px;
+    font-weight: bold;
 }
 
 .d11 .d113 .d1132 {
@@ -524,7 +533,7 @@
     transform: rotate(720deg)scale(1);
     filter: opacity(1);
 }
-</style>
+
 
 
 
