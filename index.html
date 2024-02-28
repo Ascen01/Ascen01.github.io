@@ -667,7 +667,13 @@
 </body>
 
 <script>
-
+    function viewPort() {
+        const meta = document.querySelector('meta[name="viewport"]');
+        const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
+        meta.content = `width=device-width,initial-scale=${scale}`
+    }
+    viewPort()
+    window.onresize = viewPort;
 </script>
 
 </html>
