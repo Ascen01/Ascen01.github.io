@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="F:\Design\program\Web\det-mobile\det-pic\ascen.ico" />
+    <link
+        href="https://fonts.googlefonts.cn/css?family=Anton|Archivo+Black|Do+Hyeon|Oswald|Passion+One|Righteous|Roboto+Condensed|Russo+One|Teko"
+        rel="stylesheet">
+    <title>ASCEN</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+
+        }
+
+        .all {
+            width: 750px;
+            height: 1900px;
+            background-color: #f5f5f5;
+        }
+
+
+
+        /** 头部置顶 **/
+        .a0 {
+            float: left;
+            height: 100px;
+            width: 750px;
+            background-color: #f5f5f5;
+            border-bottom: 5px solid #d6ff41;
+            margin: 0px 0px 0px 0px;
+            top: 0%;
+            left: 0%;
+            position: fixed;
+            z-index: 99;
+        }
+
+        .a0 .a01 .imga011 {
+            float: left;
+            height: auto;
+            width: 90px;
+            background-color: none;
+            margin: 5px 5px 0px 20px;
+            z-index: 99;
+        }
+
+        .a0 .a02 {
+            float: left;
+            height: 100px;
+            width: 275px;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+            z-index: 99;
+        }
+
+        .a0 .a02 .a021 {
+            display: flex;
+            height: 100px;
+            width: auto;
+            line-height: 100px;
+            font-size: 21px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+            justify-content: center;
+            text-align: center;
+            z-index: 99;
+        }
+
+        .a0 .a03,
+        .a0 .a04 {
+            float: left;
+            height: 100px;
+            width: 180px;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .a0 .a03 .a030,
+        .a0 .a04 .a040 {
+            display: block;
+            overflow: hidden;
+            z-index: 99;
+        }
+
+
+
+        .a0 .a03 .a030 .imga031,
+        .a0 .a04 .a040 .imga041 {
+
+            height: 80px;
+            width: auto;
+            background-color: none;
+            margin: 0px 0px 15px 0px;
+            z-index: 100;
+        }
+
+        .a0 .a03 .a030:hover .imga031,
+        .a0 .a04 .a040:hover .imga041 {
+            /*将图片向上偏移*/
+            transform: translateY(-100px);
+            /*绘制图片的阴影，并将阴影挪回原来位置。
+            drop-shadow参数含义颜色、x轴偏移量、y轴偏移量*/
+            filter: drop-shadow(#000000 0 100px);
+        }
+
+
+        /** 头部海报 **/
+
+        .a1 {
+            float: left;
+            height: auto;
+            width: 750px;
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        .a1 .a101 .imga11 {
+            float: left;
+            height: auto;
+            width: 750px;
+            margin: 100px 0px 0px 0px;
+        }
+
+
+
+        /** 声明 **/
+
+        .d1 {
+            float: left;
+            background-color: rgba(0, 255, 255, 0);
+            width: 750px;
+            height: auto;
+            margin: 5px 0px 5px 0px;
+        }
+
+        .d11 {
+            float: left;
+            background-color: #7e8b4f00;
+            width: auto;
+            height: auto;
+            font-size: 30px;
+            font-weight: bolder;
+            margin: 5px 0px 5px 20px;
+        }
+
+        .d12 {
+            float: left;
+            background-color: #53631100;
+            width: auto;
+            height: auto;
+            font-size: 30px;
+            font-weight: normal;
+            margin: 5px 0px 5px 0px;
+        }
+
+        /** 四个图标 **/
+
+        .d2 {
+            float: left;
+            background-color: rgba(255, 255, 255, 0);
+            width: 750px;
+            height: auto;
+        }
+
+        .d21,
+        .d22 {
+            float: left;
+            background-color: #7f7f7f00;
+            width: 750px;
+            height: auto;
+        }
+
+
+        .d211,
+        .d212,
+        .d221,
+        .d222 {
+            float: left;
+            background-color: #ffffff;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 8px dashed #000000;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            margin: 50px 30px 20px 30px;
+            animation: rotate 20s linear infinite;
+            /* 设置动画属性 */
+            transition: 2s;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .imgd2a,
+        .imgd2b,
+        .imgd2c,
+        .imgd2d {
+            float: left;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            position: relative;
+            top: 10px;
+            right: -10px;
+            transition: 2s;
+        }
+
+        .d211 :hover {
+            cursor: pointer;
+
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            transform: rotate(0deg)scale(0.95);
+        }
+
+
+
+        .imgd2a {
+            background-color: #d6ff41;
+        }
+
+        .imgd2b {
+            background-color: #ff9c00;
+        }
+
+        .imgd2c {
+            background-color: #8893ff;
+        }
+
+        .imgd2d {
+            background-color: #ffe400;
+        }
+
+        .d31 {
+            float: left;
+            width: 750px;
+            height: 70px;
+            background-color: #ffffff00;
+        }
+
+        .d311,
+        .d312 {
+            width: 100px;
+            height: auto;
+            background: none;
+            margin: 0px 0px 0px 0px;
+            position: relative;
+        }
+
+        .imgd31a,
+        .imgd31b {
+            float: left;
+            width: 120px;
+            background: none;
+            position: relative;
+            bottom: -10px;
+            left: 360px;
+            transition: 3s;
+            animation: rotate 10s linear infinite;
+            /* 设置动画属性 */
+        }
+
+        @keyframes rotate {
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        .d311 {
+            position: absolute;
+            filter: opacity(1);
+
+        }
+
+
+
+
+        .imgd32a {
+            float: left;
+            width: 750px;
+            background: none;
+            position: relative;
+            right: 30px;
+        }
+
+
+        .imgd31b:hover {
+            cursor: pointer;
+            transform: rotate(720deg)scale(1);
+            filter: opacity(1);
+        }
+
+
+
+
+
+
+        .d2-a {
+            float: left;
+            width: 650px;
+            height: auto;
+            padding: 0px 65px 0px 35px;
+            background-color: rgba(250, 235, 215, 0);
+        }
+
+        .d2-a a {
+            font-size: 40px;
+            color: #000000;
+            font-weight: bolder;
+
+            background-color: #8894ff00;
+        }
+
+        .d2-a1,
+        .d2-a3 {
+            margin: 0px 180px 0px 50px;
+        }
+
+
+        /** 置底导航 **/
+        .a7 {
+
+            height: 110px;
+            width: 750px;
+            background-color: #000000;
+            margin: 0px 0px 0px 0px;
+            bottom: 0%;
+            left: 0%;
+            position: fixed;
+            z-index: 99;
+            border-top: 5px solid #d6ff41;
+        }
+
+        .a71 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 160px 0px 5px;
+            position: relative;
+            z-index: 99;
+        }
+
+        .a72 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 230px 0px 0px;
+            position: relative;
+            z-index: 99;
+        }
+
+        .a73 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 185px 0px 0px;
+            position: relative;
+            z-index: 99;
+        }
+
+        .a74 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 200px 0px 0px;
+            position: absolute;
+            z-index: 99;
+        }
+
+        .a71 a,
+        .a72 a {
+            width: auto;
+            height: 110px;
+            background: none;
+            z-index: 99;
+        }
+
+        .a71 .imga711,
+        .a71 .imga712,
+        .a72 .imga711,
+        .a72 .imga712,
+        .a73 .imga711,
+        .a73 .imga712,
+        .a74 .imga711,
+        .a74 .imga712 {
+
+            height: 110px;
+            width: auto;
+            background-color: #000000;
+            margin: 0px 0px 0px 2px;
+            top: 0px;
+            left: 0px;
+            z-index: 99;
+            position: absolute;
+        }
+
+        .imga711:hover {
+            opacity: 0;
+        }
+
+        .imga712:hover {
+            opacity: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="all"><!-- 首页全局 -->
+        <div class="a0"><!-- 头部置顶 -->
+            <span class="a01">
+                <img class="imga011"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqciIJxSxbi08yZ0FlWr9hF.ndZRAq4ZLY79i*JuVVS8q19ubVTcv5AzGruOVc7b.C2cd3iF6gn2Pw4cp4zSUvYc!/b&bo=OAQ4BAAAAAADFzI!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </span><!-- ascen图标 -->
+            <span class="a02">
+                <ul class="a021">ASCEN个人作品集网页设计
+                </ul>
+            </span><!-- 文字个人作品集网页设计 -->
+            <span class="a03">
+                <a class="a030" href=""><img class="imga031"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqWCiBi1j23wH5JD1IaBxX0blXdqg*giw1.9gfmz6qLoG*61rcxUbnJcsAH.Yu1kLKeX6chDSOC7lCUH5vhA5Yrg!/b&bo=lAO4AQAAAAADBww!&rf=viewer_4"
+                        alt="加载错误，请再试一次！"></a>
+            </span><!-- 上一页 -->
+
+            <span class="a04">
+                <a class="a040" href=""><img class="imga041"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqaSw2RllSPxvasMq6LOMgIawRGtfEX2Gfy**ARSbvdw*Xy0hEG4h1K07WyIYRu29cMJzw.XpRvjBui570AVfKZg!/b&bo=ogO1AQAAAAADFyc!&rf=viewer_4"
+                        alt="加载错误，请再试一次！"></a>
+            </span><!-- 下一页 -->
+        </div>
+        <div class="a1">
+            <ul class="a101">
+                <img class="imga11"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqb7QWko1cWwwnMK1iDE6yp.5056DJFuLGeVpU15yRLmuNXyC18dWBuknJ4e39jQxtk2kAYBsSpTVLYgL7iwV8Qs!/b&bo=CAd4AwAAAAADF0Y!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+                <ul class="a102">
+
+                </ul>
+            </ul>
+
+        </div><!-- 头部海报 -->
+        <div class="d1">
+            <ul class="d11">
+                注释：
+            </ul>
+
+            <ul class="d12">
+                点击图标查看相关作品
+            </ul>
+        </div><!-- 声明 -->
+
+        <div class="d2">
+            <div class="d21">
+                <span class="d211">
+                    <a class="d2111" href=""><img class="imgd2a"
+                            src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVkilzp11D8PQFfz2vMg14VqsY6DHbM1qhNUxgApGLRzBxRVLKh1VB.Xu7QNlUCfJpqT8zfYz6S2j..kSCHDTyU!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"
+                            alt="加载错误，请再试一次！"></a>
+
+                </span>
+                <span class="d211">
+                    <a class="d2121" href=""><img class="imgd2b"
+                            src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqbXhI9uVMNm8ECkVEgZNUmCWAWT3qxFq*gN*Zdjt5XDsNA99Apap2GMzAYmioHrN9TVtmEBiuA0jFDRZzNXm258!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"
+                            alt="加载错误，请再试一次！"></a>
+
+                </span>
+            </div>
+            <div class="d2-a">
+                <span class="d2-aa">
+                    <a class="d2-a1" href="">iPad手绘&nbsp
+                    </a>
+                    <a class="d2-a2" href="">摄影作品&nbsp
+                    </a>
+                </span>
+            </div>
+            <div class="d22">
+                <span class="d211">
+                    <a class="d2211" href=""><img class="imgd2c"
+                            src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqQwTepvlWIe03V9clNbfDifgQunQvl7*fBk4yvt2VWmVJaC8mEcKygxsWJi2SnggWR8WxQ3lwOpNyhq8CHpSorg!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"
+                            alt="加载错误，请再试一次！"></a>
+                </span>
+
+
+                <span class="d211">
+                    <a class="d2221" href=""><img class="imgd2d"
+                            src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqfIzSoMoRYdS52PW.X5gyqo8igngOAV8Umb0D5LykugQ7p6.PWIfxTF8UNeOgyXzUdh29CuEIQ1w9OH0TT*lkuU!/b&bo=OAQ4BAAAAAADFzI!&rf=viewer_4"
+                            alt="加载错误，请再试一次！"></a>
+
+                </span>
+            </div>
+            <div class="d2-a">
+                <span class="d2-aa">
+                    <a class="d2-a3" href="">包装设计&nbsp
+                    </a>
+                    <a class="d2-a4" href="">Logo设计
+                    </a>
+                </span>
+            </div>
+        </div><!-- 四个图标 -->
+
+        <div class="d3">
+            <ul class="d31">
+                <li class="d311">
+                    <img class="imgd31a"
+                        src="http://photogz.photo.store.qq.com/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqSKp4pgs0iwDDG372YPFhNg1LA*8pdHTcGJUs6mfEutlDK.94.JS4MRKj4JtswLkIv7bj1PXvAToETtFZRysdKE!/b&bo=AAIAAgAAAAADFzI!&rf=viewer_4"
+                        alt="加载错误，请再试一次！">
+                </li>
+                <li class="d312">
+                    <img class="imgd31b"
+                        src="http://photogz.photo.store.qq.com/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVzmbnNbOiH1YnGLF5crAXJ*AsyIAgXSITyQkvwV9pw.9w294a5Es8yJ9h3AC8vdiOLXMIztpaCuI.Lq9pKDzIs!/b&bo=AAIAAgAAAAADFzI!&rf=viewer_4"
+                        alt="加载错误，请再试一次！">
+                </li>
+            </ul>
+            <ul class="d32">
+
+                <img class="imgd32a"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqWoxrPszKpQs5VBekriHDT6XU7ChzQpRP4Ic0lQPeLT3r4G.VSPx9CRUlXc3MbyLh7H*IQSnyQsEVmXdEA9wZiU!/b&bo=aAdqAwAAAAADByQ!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+
+            </ul>
+        </div>
+
+        <div class="a7">
+            <span class="a71">
+                <a href=""><img class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdKnYOfq*zUb1QAKha840yIbpL.8Z*dI21Up.jFmHFvX3TLwTZGToH0jUQ*Khyh0fiGQWJKqM1HooSNgCq.S9KQ!/b&bo=9wIDAgAAAAADF8Y!&rf=viewer_4"
+                        alt=""></a>
+                <a href=""><img class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdKnYOfq*zUb1QAKha840yIbpL.8Z*dI21Up.jFmHFvX3TLwTZGToH0jUQ*Khyh0fiGQWJKqM1HooSNgCq.S9KQ!/b&bo=9wIDAgAAAAADF8Y!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a72">
+                <a href=""><img class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqRhzRqW*zZdQivHVQ67OW397CY133uPKFpe02QEfUaZmcduNQrj*p1Y23s.LgORFYs.nbGj7voP5TPqvk5O*F60!/b&bo=QQQDAgAAAAADF3Y!&rf=viewer_4"
+                        alt=""></a>
+                <a href=""><img class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVs6BucT4*92eQxtJDdEj9EoV1KzxxlG04sLx.t.pi*3dIU6iB.L0KQazk41HFtEjE7g5OZTnYWbsosM9IfF.hg!/b&bo=QQQDAgAAAAADB2Y!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a73">
+                <a href=""><img class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZdYc.BwLiVHWrwBf8OSb*XbSg3ZPZx*E2MOBdjDIcRZz7X8A0oGHYXE8YuiwyZPfMw1bEOh9tACAyaQ2YOS7*g!/b&bo=3ANTAgAAAAADF7w!&rf=viewer_4"
+                        alt=""></a>
+                <a href=""><img class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqSdbjXMlHfWAG9VHWq8JvCQiPrnTOM5Vb3veb.bmDZ.moKMisPzhnCZezI8sJmgWn28HQEQWoDf4*87GvGP76O0!/b&bo=3ANTAgAAAAADF7w!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a74">
+                <a href=""><img class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVDb3BPWA583SByAvTZyTmbv9dJFaY5SDflx.LhVlKybUsad6A3E3hhdWkbcgEZZH1tCNcOs1M4RQmH4kNahmUc!/b&bo=9AIDAgAAAAADF8U!&rf=viewer_4"
+                        alt=""></a>
+                <a href=""><img class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZAV8g4Wn2ekAP*qMRYQMYUKACE7OqoNZpUIdLmgXB*SbBrnvjAAhc1HY1NCdbBfItg3qzu0f0JaG.ouyRCddmk!/b&bo=9AIDAgAAAAADF8U!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+        </div><!-- 尾部置底 -->
+    </div>
+</body>
+
+<script>
+    function viewPort() {
+        const meta = document.querySelector('meta[name="viewport"]');
+        const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
+        meta.content = `width=device-width,initial-scale=${scale}`
+    }
+    viewPort()
+    window.onresize = viewPort;
+    //
+    var element = document.querySelector('.d211'); // 获取元素对象
+
+    function stopRotate() {
+        element.style.animationPlayState = "paused"; // 停止动画
+    }
+
+    function startRotate() {
+        element.style.animationPlayState = ""; // 重新开始动画
+    }
+
+    element.addEventListener('mouseenter', stopRotate); // 鼠标进入时调用stopRotate函数
+    element.addEventListener('mouseleave', startRotate); // 鼠标离开时调用startRotate函数
+    //
+
+
+</script>
+
+</html>
