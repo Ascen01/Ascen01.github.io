@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="F:\Design\program\Web\det-mobile\det-pic\ascen.ico" />
@@ -71,6 +72,7 @@
             font-weight: bold;
             background-color: none;
             margin: 0px 0px 0px 0px;
+            padding: 0px;
             justify-content: center;
             text-align: center;
             z-index: 99;
@@ -103,7 +105,7 @@
             height: 80px;
             width: auto;
             background-color: none;
-            margin: 0px 0px 15px 0px;
+            margin: 10px 0px 0px 0px;
             z-index: 100;
         }
 
@@ -597,12 +599,14 @@
                         </li>
                     </ul>
                     <ul class="b2113">
-                        <a href="">点击浏览</a>
+                        <a
+                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/play01.html">点击浏览</a>
                     </ul>
                 </span>
                 <span class="b212">
                     <ul class="b2121">
-                        <a href="">
+                        <a
+                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/play01.html">
                             <img class="imgb2121a"
                                 src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdGfbDmu4mTKBp46OUFBDWZPumtYy8orsbSPXyMm.Yklxrfhcr7YN5YDqWQozso*NR3km9396MjYhLXZtYTdC0A!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"
                                 alt="加载错误，请再试一次！">
@@ -737,6 +741,7 @@
 </body>
 
 <script>
+    /**屏幕自适应**/
     function viewPort() {
         const meta = document.querySelector('meta[name="viewport"]');
         const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
@@ -745,19 +750,7 @@
     viewPort()
     window.onresize = viewPort;
     //
-    var element = document.querySelector('.d211'); // 获取元素对象
 
-    function stopRotate() {
-        element.style.animationPlayState = "paused"; // 停止动画
-    }
-
-    function startRotate() {
-        element.style.animationPlayState = ""; // 重新开始动画
-    }
-
-    element.addEventListener('mouseenter', stopRotate); // 鼠标进入时调用stopRotate函数
-    element.addEventListener('mouseleave', startRotate); // 鼠标离开时调用startRotate函数
-    //
 
 
 </script>
