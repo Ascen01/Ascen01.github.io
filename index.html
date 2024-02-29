@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="F:\Design\program\Web\det-mobile\det-pic\ascen.ico" />
@@ -71,6 +72,7 @@
             font-weight: bold;
             background-color: none;
             margin: 0px 0px 0px 0px;
+            padding: 0px;
             justify-content: center;
             text-align: center;
             z-index: 99;
@@ -103,7 +105,7 @@
             height: 80px;
             width: auto;
             background-color: none;
-            margin: 0px 0px 15px 0px;
+            margin: 10px 0px 0px 0px;
             z-index: 100;
         }
 
@@ -775,6 +777,7 @@
 </body>
 
 <script>
+    /**屏幕自适应**/
     function viewPort() {
         const meta = document.querySelector('meta[name="viewport"]');
         const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
