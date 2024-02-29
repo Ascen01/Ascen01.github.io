@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="F:\Design\program\Web\det-mobile\det-pic\ascen.ico" />
+    <link
+        href="https://fonts.googlefonts.cn/css?family=Anton|Archivo+Black|Do+Hyeon|Oswald|Passion+One|Righteous|Roboto+Condensed|Russo+One|Teko"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3881267_wfv3iyzbijg.css">
+    <title>轮播图</title>
+
+</head>
+<style>
+    /**固定悬浮菜单**/
+    /** 头部置顶 **/
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .all {
+        float: left;
+        width: 750px;
+        height: auto;
+        background-color: #f5f5f5;
+    }
+
+    .a0 {
+        float: left;
+        height: 100px;
+        width: 750px;
+        background-color: #f5f5f5;
+        border-bottom: 5px solid #d6ff41;
+        margin: 0px 0px 0px 0px;
+        top: 0%;
+        left: 0%;
+        position: fixed;
+        z-index: 99;
+    }
+
+    .a01 {
+        float: left;
+        height: auto;
+        width: auto;
+        background-color: #8894ff00;
+
+    }
+
+    .a0 .a01 .imga011 {
+        float: left;
+        height: auto;
+        width: 90px;
+        background-color: none;
+        margin: 5px 5px 0px 20px;
+        z-index: 99;
+    }
+
+    .a0 .a02 {
+        float: left;
+        height: 100px;
+        width: 275px;
+        background-color: rgba(255, 0, 0, 0)(255, 255, 255);
+        margin: 0px 0px 0px 0px;
+        z-index: 99;
+
+    }
+
+    .a0 .a02 .a021 {
+        display: flex;
+        height: 100px;
+        width: auto;
+        line-height: 100px;
+        font-size: 21px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        background-color: rgba(255, 0, 0, 0);
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        justify-content: center;
+        text-align: center;
+        z-index: 99;
+    }
+
+    .a0 .a03,
+    .a0 .a04 {
+        float: left;
+        height: 100px;
+        width: 180px;
+        background-color: none;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        justify-content: center;
+        z-index: 100;
+    }
+
+    .a0 .a03 .a030,
+    .a0 .a04 .a040 {
+        display: block;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+
+
+    .a0 .a03 .a030 .imga031,
+    .a0 .a04 .a040 .imga041 {
+
+        height: 80px;
+        width: auto;
+        background-color: rgba(255, 0, 0, 0);
+        margin: 10px 0px 0px 0px;
+        z-index: 100;
+    }
+
+    .a0 .a03 .a030:hover .imga031,
+    .a0 .a04 .a040:hover .imga041 {
+        /*将图片向上偏移*/
+        transform: translateY(-100px);
+        /*绘制图片的阴影，并将阴影挪回原来位置。
+            drop-shadow参数含义颜色、x轴偏移量、y轴偏移量*/
+        filter: drop-shadow(#000000 0 100px);
+    }
+
+    .d3 {
+        float: left;
+        width: auto;
+        height: auto;
+        background-color: none;
+        margin: 0px 0px 130px 0px;
+    }
+
+    .d31 {
+        float: left;
+        width: 750px;
+        height: 70px;
+        background-color: #ffffff00;
+    }
+
+    .d311,
+    .d312 {
+        width: 100px;
+        height: auto;
+        background: none;
+        margin: 0px 0px 0px 0px;
+        position: relative;
+    }
+
+    .imgd31a,
+    .imgd31b {
+        float: left;
+        width: 120px;
+        background: none;
+        position: relative;
+        bottom: -10px;
+        left: 360px;
+        transition: 3s;
+        animation: rotate 10s linear infinite;
+        /* 设置动画属性 */
+    }
+
+    @keyframes rotate {
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    .d311 {
+        position: absolute;
+        filter: opacity(1);
+
+    }
+
+
+
+
+    .imgd32a {
+        float: left;
+        width: 750px;
+        background: none;
+        position: relative;
+        right: 30px;
+    }
+
+
+    .imgd31b:hover {
+        cursor: pointer;
+        transform: rotate(720deg)scale(1);
+        filter: opacity(1);
+    }
+
+
+
+
+
+
+    /** 置底导航 **/
+    .a7 {
+
+        height: 130px;
+        width: 750px;
+        background-color: #000000;
+        margin: 0px 0px 0px 0px;
+        bottom: 0%;
+        left: 0%;
+        position: fixed;
+        z-index: 99;
+        border-top: 5px solid #d6ff41;
+    }
+
+    .a71 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 160px 0px 5px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .a72 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 230px 0px 0px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .a73 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 185px 0px 0px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .a74 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 200px 0px 0px;
+        position: absolute;
+        z-index: 99;
+    }
+
+    .a71 a,
+    .a72 a {
+        width: auto;
+        height: 110px;
+        background: none;
+        z-index: 99;
+    }
+
+    .a71 .imga711,
+    .a71 .imga712,
+    .a72 .imga711,
+    .a72 .imga712,
+    .a73 .imga711,
+    .a73 .imga712,
+    .a74 .imga711,
+    .a74 .imga712 {
+
+        height: 110px;
+        width: auto;
+        background-color: #000000;
+        margin: 0px 0px 0px 2px;
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+        position: absolute;
+    }
+
+    .imga711:hover {
+        opacity: 0;
+    }
+
+    .imga712:hover {
+        opacity: 0;
+    }
+
+    /**固定悬浮菜单**/
+
+
+
+    /**css动画样式 ↑ **/
+    /**轮播图**/
+    section {
+        float: left;
+        position: relative;
+        height: 730px;
+        width: 730px;
+        border: 10px solid #d6ff41;
+        margin: 110px 0px 250px 0px;
+        background-color: rgba(255, 0, 0, 0);
+    }
+
+    #img {
+        float: left;
+        height: 730px;
+        width: 730px;
+        background-size: 100% 100%;
+    }
+
+    p {
+        float: left;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+    }
+
+    i {
+
+        height: 15px;
+        width: 15px;
+        background-color: #8893ff;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    i:nth-child(1) {
+        background-color: #d6ff41;
+    }
+
+    /* i:nth-child(4) {
+        margin-right: 10;
+    } */
+
+    .left,
+    .right {
+        float: left;
+        color: #d6ff41;
+        font-size: 100px;
+        font-weight: bolder;
+        position: absolute;
+        top: 50%;
+        font-weight: 500;
+        cursor: pointer;
+        opacity: 70%;
+    }
+
+    .left:hover {
+        color: #8893ff;
+        opacity: 100%;
+    }
+
+    .right:hover {
+        color: #8893ff;
+        opacity: 100%;
+    }
+
+    .left {
+        left: 0px;
+        transform: translate(15%, -50%);
+    }
+
+    .right {
+        right: 0px;
+        transform: translate(-15%, -50%);
+    }
+</style>
+
+<body>
+    <!-- html表格结构 ↓ -->
+    <div class="all"><!-- 首页全局 -->
+        <div class="a0"><!-- 头部置顶 -->
+            <span class="a01">
+                <img class="imga011"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqciIJxSxbi08yZ0FlWr9hF.ndZRAq4ZLY79i*JuVVS8q19ubVTcv5AzGruOVc7b.C2cd3iF6gn2Pw4cp4zSUvYc!/b&bo=OAQ4BAAAAAADFzI!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </span><!-- ascen图标 -->
+            <span class="a02">
+                <ul class="a021">
+                    ASCEN个人作品集网页设计
+                </ul>
+            </span><!-- 文字个人作品集网页设计 -->
+            <span class="a03">
+                <a class="a030" href=""><img class="imga031"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqWCiBi1j23wH5JD1IaBxX0blXdqg*giw1.9gfmz6qLoG*61rcxUbnJcsAH.Yu1kLKeX6chDSOC7lCUH5vhA5Yrg!/b&bo=lAO4AQAAAAADBww!&rf=viewer_4"
+                        alt="加载错误，请再试一次！"></a>
+            </span><!-- 上一页 -->
+
+            <span class="a04">
+                <a class="a040" href=""><img class="imga041"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqaSw2RllSPxvasMq6LOMgIawRGtfEX2Gfy**ARSbvdw*Xy0hEG4h1K07WyIYRu29cMJzw.XpRvjBui570AVfKZg!/b&bo=ogO1AQAAAAADFyc!&rf=viewer_4"
+                        alt="加载错误，请再试一次！"></a>
+            </span><!-- 下一页 -->
+        </div>
+        <!-- 轮播图 ↓ -->
+        <section>
+            <span class="left iconfont icon-anniu_jiantouxiangzuo"></span>
+            <img src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqS1PqLdlckp*jmDxq1ty*VFlc4EzHcuLw6za7iYngyuPd9lSwvEe42VLpePvjy8*MAvLVYGdEBigxfRyuajm5EY!/b&bo=OAQ4BAAAAAADV3I!&rf=viewer_4"
+                alt="" id="img">
+            <span class="right iconfont icon-anniu-jiantouxiangyou"></span>
+            <p></p>
+        </section>
+
+        <!-- 轮播图 ↑ -->
+        <!-- 底标 ↓ -->
+        <div class="d3">
+            <ul class="d31">
+                <li class="d311">
+                    <img class="imgd31a"
+                        src="http://photogz.photo.store.qq.com/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqSKp4pgs0iwDDG372YPFhNg1LA*8pdHTcGJUs6mfEutlDK.94.JS4MRKj4JtswLkIv7bj1PXvAToETtFZRysdKE!/b&bo=AAIAAgAAAAADFzI!&rf=viewer_4"
+                        alt="加载错误，请再试一次！">
+                </li>
+                <li class="d312">
+                    <img class="imgd31b"
+                        src="http://photogz.photo.store.qq.com/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVzmbnNbOiH1YnGLF5crAXJ*AsyIAgXSITyQkvwV9pw.9w294a5Es8yJ9h3AC8vdiOLXMIztpaCuI.Lq9pKDzIs!/b&bo=AAIAAgAAAAADFzI!&rf=viewer_4"
+                        alt="加载错误，请再试一次！">
+                </li>
+            </ul>
+            <ul class="d32">
+
+                <img class="imgd32a"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqWoxrPszKpQs5VBekriHDT6XU7ChzQpRP4Ic0lQPeLT3r4G.VSPx9CRUlXc3MbyLh7H*IQSnyQsEVmXdEA9wZiU!/b&bo=aAdqAwAAAAADByQ!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+
+            </ul>
+        </div>
+
+        <div class="a7">
+            <span class="a71">
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/index.html"><img
+                        class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdKnYOfq*zUb1QAKha840yIbpL.8Z*dI21Up.jFmHFvX3TLwTZGToH0jUQ*Khyh0fiGQWJKqM1HooSNgCq.S9KQ!/b&bo=9wIDAgAAAAADF8Y!&rf=viewer_4"
+                        alt=""></a>
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/index.html"><img
+                        class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdj.lio3X61aZbSl8hSVnVbRDFl90bFYro06TOAuxeqecdip8TqBpz*Mp4NqY12.ddmqgzSzMu*hwS9Qwiy.9DA!/b&bo=9wIDAgAAAAADF8Y!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a72">
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/shopping.html"><img
+                        class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqRhzRqW*zZdQivHVQ67OW397CY133uPKFpe02QEfUaZmcduNQrj*p1Y23s.LgORFYs.nbGj7voP5TPqvk5O*F60!/b&bo=QQQDAgAAAAADF3Y!&rf=viewer_4"
+                        alt=""></a>
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/shopping.html"><img
+                        class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVs6BucT4*92eQxtJDdEj9EoV1KzxxlG04sLx.t.pi*3dIU6iB.L0KQazk41HFtEjE7g5OZTnYWbsosM9IfF.hg!/b&bo=QQQDAgAAAAADB2Y!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a73">
+                <a href=""><img class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZdYc.BwLiVHWrwBf8OSb*XbSg3ZPZx*E2MOBdjDIcRZz7X8A0oGHYXE8YuiwyZPfMw1bEOh9tACAyaQ2YOS7*g!/b&bo=3ANTAgAAAAADF7w!&rf=viewer_4"
+                        alt=""></a>
+                <a href=""><img class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqXj5nxVGYVHMNchZXE1BIoVNe44ImiYlvdq9.bjHgia39arlRZTWztcPy.EY.g0WB91mazHuqJJghgHj4lWQpxo!/b&bo=3ANTAgAAAAADB6w!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a74">
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/others.html"><img
+                        class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVDb3BPWA583SByAvTZyTmbv9dJFaY5SDflx.LhVlKybUsad6A3E3hhdWkbcgEZZH1tCNcOs1M4RQmH4kNahmUc!/b&bo=9AIDAgAAAAADF8U!&rf=viewer_4"
+                        alt=""></a>
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/others.html"><img
+                        class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVDb3BPWA583SByAvTZyTmbv9dJFaY5SDflx.LhVlKybUsad6A3E3hhdWkbcgEZZH1tCNcOs1M4RQmH4kNahmUc!/b&bo=9AIDAgAAAAADF8U!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+        </div><!-- 尾部置底 -->
+        <!-- html表格结构 ↑ -->
+        <!-- js功能部分 ↓  -->
+        <script>
+
+            /**屏幕自适应**/
+            function viewPort() {
+                const meta = document.querySelector('meta[name="viewport"]');
+                const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
+                meta.content = `width=device-width,initial-scale=${scale}`
+            }
+            viewPort()
+            window.onresize = viewPort;
+
+
+            //**轮播图**/
+            /**  需求：
+                 *  1、自动切换图片
+                    2、鼠标移入，图片暂停，移出，图片恢复轮播
+                    3、左右两个按钮，点击可以切换上一张或下一张
+                    4、下面的四个小圆点会随图片变颜色
+                    5、小圆点可以点击并切换到对应的图片上
+                */
+
+            //获取把圆点节点放置的盒子节点，即p节点
+            let pEle = document.getElementsByTagName("p")[0];
+            //获取事件代理的父元素section
+            let secEle = document.getElementsByTagName("section")[0];
+
+            let imgArr = ["http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqS1PqLdlckp*jmDxq1ty*VFlc4EzHcuLw6za7iYngyuPd9lSwvEe42VLpePvjy8*MAvLVYGdEBigxfRyuajm5EY!/b&bo=OAQ4BAAAAAADV3I!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqbf3k3LiSp*z43SatlTFvVz*PWXLFtedZyk11mbgqdMXfMxGDFu4vGdEwKgkb1qlOlIWXokpaG6M1C4WR.0SgBU!/b&bo=OAQ4BAAAAAADd1I!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqfEbatjDaU3Dv2sPnC7L6t3MroQomtFuy*aQvY*NHe5uPGrvZ9oQwRX5McXZF87BePfluVBRjLe5O.CQmdlhNAs!/b&bo=OAQ4BAAAAAADd1I!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqbIa.qKIeU0g6JMI0XzdkDJrtFHWHOMMwdI4leqEuqZPujcVMlOU9xvjrO5aSKqk9hZ7NVC6*b1zfqueBNE0RMU!/b&bo=OAQ4BAAAAAADZ0I!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqSkQ2DY.NXCmFvLt818tbT4pVOQePxyD2mn*vJwGRxHhc61*ptPa30nVS6DlZzfb2XkHS1KqSP5L22gEX9H8H6o!/b&bo=OAQ4BAAAAAADZ0I!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqV1XRecpCsSqPBeaTBrMTZluhq7v9tWTaeLD9.X27URGg4YSIumCrhJWCYBo0ZGWNPl6yDE5wGXBu28SlUgAb8c!/b&bo=OAQ4BAAAAAADd1I!&rf=viewer_4",
+
+
+            ] //获取时间函数的起始下标
+            let i = 0;
+            //图片有多少张，就传几个参进去，并且接收这个返回的数组
+            let cirArr = creatCircle(imgArr.length);
+            //遍历cirArr数组，将圆点添加进它的父节点p节点中
+            cirArr.forEach(node => pEle.appendChild(node));
+
+            //获取所有的圆点节点
+            let iEle = document.getElementsByTagName("i");
+
+            //给每一个圆点添加上自定义属性，并赋上下标
+            for (let k = 0; k < iEle.length; k++) {
+                iEle[k].dataset.index = k;
+            }
+
+            let timer;
+
+            //轮播：时间函数，1秒自动换一张
+            function playTime() {
+                timer = setInterval(() => {
+                    //循环展示图片
+                    i++;
+
+                    //如果已经跳到最后一张，就再次回到第一张
+                    if (i > imgArr.length - 1) {
+                        i = 0;
+                    }
+
+                    //给圆点添加样式，开始运行该函数
+                    addStyleI(i);
+                    //图片标签地址（src属性）
+                    img.src = imgArr[i];
+                }
+
+                    , 1000);
+            }
+
+            playTime();
+
+            // 鼠标移入，图片暂停
+            secEle.addEventListener("mouseenter", function () {
+                clearInterval(timer);
+                timer = null;
+            });
+            // 鼠标移出，图片恢复滚动
+            secEle.addEventListener("mouseleave", playTime);
+
+            //给父节点绑定一个事件代理，点击左右按钮切换图片
+            secEle.addEventListener("click", function (e) {
+                let event = e || window.event;
+
+                //点击左右按钮切换图片
+                if (event.target.className == "left iconfont icon-anniu_jiantouxiangzuo") {
+                    i--;
+                }
+
+                if (event.target.className == "right iconfont icon-anniu-jiantouxiangyou") {
+                    i++;
+                }
+
+                if (i < 0) {
+                    i = imgArr.length - 1;
+                }
+
+                if (i == imgArr.length) {
+                    //3
+                    i = 0;
+                }
+
+                img.src = imgArr[i];
+                addStyleI(i);
+
+                //点击小圆点可以切换到对应的图片上
+                if (event.target.nodeName == "I"
+                ) {
+                    console.log("11111");
+                    //获得点击的圆点的自定义索引值
+                    cirI = event.target.dataset.index;
+                    //替换图片
+                    img.src = imgArr[cirI];
+                    //更改圆点样式
+                    addStyleI(cirI);
+                    //每当点击小圆点，i的值就会被赋成圆点下标的值
+                    i = cirI;
+                }
+            });
+
+            //暂停图片滚动
+            function picScroll() {
+                clearInterval(timer);
+            }
+
+            //生成圆点
+            function creatCircle(num) {
+                //创建一个空数组来接收这个圆点
+                let iArr = [];
+
+                for (let j = 0; j < num; j++) {
+                    //新增圆点节点
+                    let circleNode = document.createElement("i");
+                    //再把新增的圆点节点放进圆点数组中
+                    iArr.push(circleNode);
+                }
+
+                //完成后，返回该数组
+                return iArr;
+            }
+
+            //给圆点添加样式
+            function addStyleI(index) {
+                //圆点的默认颜色是灰色
+                [...iEle].forEach(node => node.style.backgroundColor = "#8893ff");
+                //当跳到该图片时，圆点变成白色
+                iEle[index].style.backgroundColor = "#d6ff41";
+            }
+
+
+
+        </script>
+        <!-- js功能部分 ↑  -->
+</body>
+
+</html>
