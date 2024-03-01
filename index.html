@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="F:\Design\program\Web\det-mobile\det-pic\ascen.ico" />
+    <link
+        href="https://fonts.googlefonts.cn/css?family=Anton|Archivo+Black|Do+Hyeon|Oswald|Passion+One|Righteous|Roboto+Condensed|Russo+One|Teko"
+        rel="stylesheet">
+    <title>ASCEN独创-PROFILE</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+
+        }
+
+        .all {
+            float: left;
+            width: 750px;
+            height: auto;
+            background-color: #f5f5f5;
+        }
+
+
+
+        /** 头部置顶 **/
+        .a0 {
+            float: left;
+            height: 100px;
+            width: 750px;
+            background-color: #f5f5f5;
+            border-bottom: 5px solid #d6ff41;
+            margin: 0px 0px 0px 0px;
+            top: 0%;
+            left: 0%;
+            position: fixed;
+            z-index: 99;
+        }
+
+        .a0 .a01 .imga011 {
+            float: left;
+            height: auto;
+            width: 90px;
+            background-color: none;
+            margin: 5px 5px 0px 20px;
+            z-index: 99;
+        }
+
+        .a0 .a02 {
+            float: left;
+            height: 100px;
+            width: 275px;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+            z-index: 99;
+        }
+
+        .a0 .a02 .a021 {
+            display: flex;
+            height: 100px;
+            width: auto;
+            line-height: 100px;
+            font-size: 21px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+            padding: 0px;
+            justify-content: center;
+            text-align: center;
+            z-index: 99;
+        }
+
+        .a0 .a03,
+        .a0 .a04 {
+            float: left;
+            height: 100px;
+            width: 180px;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .a0 .a03 .a030,
+        .a0 .a04 .a040 {
+            display: block;
+            overflow: hidden;
+            z-index: 99;
+        }
+
+
+
+        .a0 .a03 .a030 .imga031,
+        .a0 .a04 .a040 .imga041 {
+
+            height: 80px;
+            width: auto;
+            background-color: none;
+            margin: 10px 0px 0px 0px;
+            z-index: 100;
+        }
+
+        .a0 .a03 .a030:hover .imga031,
+        .a0 .a04 .a040:hover .imga041 {
+            /*将图片向上偏移*/
+            transform: translateY(-100px);
+            /*绘制图片的阴影，并将阴影挪回原来位置。
+            drop-shadow参数含义颜色、x轴偏移量、y轴偏移量*/
+            filter: drop-shadow(#000000 0 100px);
+        }
+
+
+        /** 头部海报 **/
+
+        .a1 {
+            float: left;
+            height: auto;
+            width: 750px;
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        .a1 .a101 .imga11 {
+            float: left;
+            height: auto;
+            width: 750px;
+            margin: 100px 0px 0px 0px;
+        }
+
+
+
+        /** 声明 **/
+
+        .a2 {
+            float: left;
+            height: auto;
+            width: 690px;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+            padding: 30px 30px 30px 30px;
+        }
+
+        .a2 .a21 .imga211 {
+            float: left;
+            height: 80px;
+            width: auto;
+            background-color: none;
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        .a2 .a22 {
+
+            float: left;
+            height: auto;
+            width: 660px;
+            background-color: rgba(255, 0, 0, 0);
+            margin: 0px 0px 0px 0px;
+        }
+
+        .a2 .a22 .a221 {
+
+            float: left;
+            height: auto;
+            width: 20px;
+            font-size: 22px;
+            background-color: rgba(255, 0, 0, 0);
+            margin: 0px 0px 0px 0px;
+        }
+
+        .a2 .a22 .a222 {
+
+            float: left;
+            height: auto;
+            width: 600px;
+            font-size: 22px;
+            background-color: rgba(255, 0, 0, 0);
+            margin: 0px 0px 0px 0px;
+        }
+
+        .a3 {
+            float: left;
+            width: 700px;
+            height: 200px;
+            background-color: rgba(0, 174, 255, 0);
+            text-align: center;
+            padding: 0px 10px 10px 40px;
+        }
+
+        .a3 .a31 {
+            float: left;
+            width: auto;
+            height: 700px;
+            background-color: rgba(0, 0, 0, 0);
+            border-bottom: 4px solid #000000;
+            padding: 10px 0px 10px 0px;
+
+        }
+
+        .a3 .a311 {
+            float: left;
+            font-size: 60px;
+            font-weight: bolder;
+            text-align: center;
+            padding: 0px 0px 0px 0px;
+            background: none;
+        }
+
+        .a3 .a312 {
+            float: left;
+            font-size: 45px;
+            font-weight: bolder;
+            text-align: center;
+            padding: 20px 0px 0px 0px;
+            background: none;
+        }
+
+
+        .a3 .a32 {
+            width: 420px;
+            float: left;
+            font-size: 26px;
+            font-weight: normal;
+            text-align: left;
+            line-height: 40px;
+            padding: 20px 20px 20px 20px;
+            color: #ffffff;
+            background-color: #000000;
+            border-radius: 10px;
+            margin: 0px 10px 10px 10px;
+        }
+
+        .a41 {
+            float: left;
+            width: 710px;
+            height: auto;
+            padding: 20px 20px 20px 20px;
+            background-color: rgba(127, 255, 212, 0);
+        }
+
+        .a41 .a411 {
+            float: left;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 10px solid #bbbbbb;
+            background-color: #ffffff;
+            padding: 15px 15px 15px 15px;
+
+        }
+
+        .a41 .a411 .imga4111 {
+            float: left;
+            width: 280px;
+            height: auto;
+            padding: 0px 0px 0px 0px;
+            background-color: #dedede;
+            border-radius: 50%;
+
+            animation: rotate 5s linear infinite;
+            /* 设置动画属性 */
+        }
+
+        .a41 .a412 .imga41211 {
+            float: left;
+            width: 300px;
+            height: auto;
+            padding: 0px 0px 0px 0px;
+            background-color: rgba(0, 255, 170, 0);
+            margin: 0px 0px 0px 35px;
+
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+        .a41 .a412 .a4122 {
+            float: left;
+            width: 220px;
+            height: 60px;
+            font-size: 30px;
+            margin: 20px 30px 0px 80px;
+            color: #ffffff;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .a41 .a412 .a4123 {
+            float: left;
+            width: 120px;
+            height: 60px;
+            font-size: 30px;
+            margin: 30px 30px 0px 130px;
+            color: #ffffff;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .a42 {
+            float: left;
+            width: 710px;
+            height: auto;
+            padding: 0px 20px 20px 20px;
+            background-color: rgba(0, 255, 170, 0);
+        }
+
+        .a421 {
+            float: left;
+            width: 310px;
+            height: auto;
+            padding: 5px 10px 15px 14px;
+            margin: 5px 10px 5px 5px;
+            background-color: #d6ff41;
+            border-radius: 20px;
+            border: 3px solid rgb(0, 0, 0);
+        }
+
+        .a422 {
+            float: left;
+            width: 310px;
+            height: auto;
+            padding: 5px 10px 15px 14px;
+            margin: 5px 5px 5px 10px;
+            background-color: #d4d4d4;
+            border-radius: 20px;
+            border: 3px solid rgb(255, 255, 255);
+        }
+
+        .a4211,
+        .a4221 {
+            float: left;
+            height: auto;
+            width: 300px;
+            border-bottom: 3px solid #000000;
+            margin: 5px 0px 5px 0px;
+            background: rgba(255, 0, 0, 0);
+            font-size: 40px;
+            font-family: 'Do Hyeon', sans-serif;
+            font-weight: bolder;
+            letter-spacing: 0.1em;
+            justify-content: center;
+        }
+
+        .a4212,
+        .a4222 {
+            font-size: 22px;
+            font-family: 'Do Hyeon', sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin: 5px 0px 5px 0px;
+            background: none;
+        }
+
+        .a4213,
+        .a4214,
+        .a4215,
+        .a4223 {
+
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .a5 {
+            float: left;
+            height: auto;
+            width: 710px;
+            padding: 20px 20px 20px 20px;
+            background-color: #000000;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .a51 {
+            float: left;
+            width: 700px;
+            font-size: 24px;
+            font-family: 'Do Hyeon', sans-serif;
+            font-weight: lighter;
+            color: #ffffff;
+            background: rgba(255, 0, 0, 0);
+        }
+
+        .a52 {
+            float: left;
+            width: 730px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #d6ff41;
+            background: rgba(251, 0, 0, 0);
+            margin: 5px 0px 10px 0px;
+        }
+
+        .a53 {
+            float: left;
+            width: 730px;
+            background-color: rgba(0, 255, 255, 0);
+        }
+
+        .a531 {
+            display: inline;
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+            color: #d6ff41;
+            background: rgba(255, 0, 0, 0);
+            line-height: 30px;
+            height: 30px;
+            transform: translate(0%, -14%);
+            margin: 20px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .a532 {
+            display: inline;
+            float: left;
+            font-size: 30px;
+            font-family: 'Do Hyeon', sans-serif;
+            font-weight: normal;
+            color: #ffffff;
+            background: rgba(255, 0, 0, 0);
+            letter-spacing: 0.1em;
+            line-height: 30px;
+            height: 30px;
+            margin: 0px 0px 0px 10px;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .a54 {
+            width: 650px;
+            display: block;
+            float: left;
+            font-size: 19px;
+            color: #ffffff;
+            background: #7e7e7e00;
+            margin: 0px 0px 0px 30px;
+            padding: 0px 30px 0px 0px;
+            height: auto;
+            line-height: 30px;
+            word-wrap: break-word;
+        }
+
+        .a55 {
+            width: 650px;
+            float: left;
+            font-size: 20px;
+            color: #ffffff;
+            background: rgba(255, 255, 0, 0);
+            margin: 0px 0px 0px 30px;
+            padding: 0px 30px 0px 0px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+
+
+        .a61 {
+            float: left;
+            width: 750px;
+            height: 34px;
+            line-height: 34px;
+            font-size: 22px;
+            color: #000000;
+            text-align: center;
+            padding: 20px 0px 0px 0px;
+            background: rgba(255, 0, 0, 0);
+        }
+
+        .a62 {
+            float: left;
+            width: 750px;
+            height: 34px;
+            line-height: 34px;
+            font-size: 22px;
+            color: #7e7e7e;
+            text-align: center;
+            padding: 0px 0px 20px 0px;
+            background: rgba(255, 0, 0, 0);
+            margin: 0px 0px 140px 0px;
+        }
+
+        .a7 {
+
+            height: 130px;
+            width: 750px;
+            background-color: #000000;
+            margin: 0px 0px 0px 0px;
+            bottom: 0%;
+            left: 0%;
+            position: fixed;
+            z-index: 99;
+            border-top: 5px solid #d6ff41;
+        }
+
+        .a71 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 160px 0px 5px;
+            position: relative;
+            z-index: 99;
+        }
+
+        .a72 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 230px 0px 0px;
+            position: relative;
+            z-index: 99;
+        }
+
+        .a73 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 185px 0px 0px;
+            position: relative;
+            z-index: 99;
+        }
+
+        .a74 {
+
+            height: 110px;
+            width: auto;
+            background-color: #ffffff;
+            margin: 0px 200px 0px 0px;
+            position: absolute;
+            z-index: 99;
+        }
+
+        .a71 a,
+        .a72 a {
+            width: auto;
+            height: 110px;
+            background: none;
+            z-index: 99;
+        }
+
+        .a71 .imga711,
+        .a71 .imga712,
+        .a72 .imga711,
+        .a72 .imga712,
+        .a73 .imga711,
+        .a73 .imga712,
+        .a74 .imga711,
+        .a74 .imga712 {
+
+            height: 110px;
+            width: auto;
+            background-color: #000000;
+            margin: 0px 0px 0px 2px;
+            top: 0px;
+            left: 0px;
+            z-index: 99;
+            position: absolute;
+        }
+
+        .imga711:hover {
+            opacity: 0;
+        }
+
+        .imga712:hover {
+            opacity: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="all"><!-- 首页全局 -->
+        <div class="a0"><!-- 头部置顶 -->
+            <span class="a01">
+                <img class="imga011"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqciIJxSxbi08yZ0FlWr9hF.ndZRAq4ZLY79i*JuVVS8q19ubVTcv5AzGruOVc7b.C2cd3iF6gn2Pw4cp4zSUvYc!/b&bo=OAQ4BAAAAAADFzI!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </span><!-- ascen图标 -->
+            <span class="a02">
+                <ul class="a021">ASCEN个人作品集网页设计
+                </ul>
+            </span><!-- 文字个人作品集网页设计 -->
+            <span class="a03">
+                <a class="a030" href=""><img class="imga031"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqWCiBi1j23wH5JD1IaBxX0blXdqg*giw1.9gfmz6qLoG*61rcxUbnJcsAH.Yu1kLKeX6chDSOC7lCUH5vhA5Yrg!/b&bo=lAO4AQAAAAADBww!&rf=viewer_4"
+                        alt="加载错误，请再试一次！"></a>
+            </span><!-- 上一页 -->
+
+            <span class="a04">
+                <a class="a040" href=""><img class="imga041"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqaSw2RllSPxvasMq6LOMgIawRGtfEX2Gfy**ARSbvdw*Xy0hEG4h1K07WyIYRu29cMJzw.XpRvjBui570AVfKZg!/b&bo=ogO1AQAAAAADFyc!&rf=viewer_4"
+                        alt="加载错误，请再试一次！"></a>
+            </span><!-- 下一页 -->
+        </div>
+        <div class="a1">
+            <ul class="a101">
+                <img class="imga11"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqb7QWko1cWwwnMK1iDE6yp.5056DJFuLGeVpU15yRLmuNXyC18dWBuknJ4e39jQxtk2kAYBsSpTVLYgL7iwV8Qs!/b&bo=CAd4AwAAAAADF0Y!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+                <ul class="a102">
+
+                </ul>
+            </ul>
+
+        </div><!-- 头部海报 -->
+        <div class="a2">
+            <ul class="a21">
+                <img class="imga211"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqYQ3C34gpDgw8rfymWHcaNEGyoqZVeCnYgR8J*Dt**oGwJg2gjamFwYt5v7PCZ3j7Fkmzt*4ZOrnA4yQpXa5K9o!/b&bo=qgNpAQAAAAADF*M!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </ul>
+
+            <ul class="a22">
+                <li class="a221">●</li>
+                <li class="a222">该网站由前端技术(HTML5、CSS、JAVASCRIPT)编写，作品内容包含Photoshop、Coreldraw、Illustrator、CINEMA
+                    4D、Octane、Keyshot、Procreate等软件技术支持。</li>
+            </ul>
+        </div><!-- 声明 -->
+
+        <div class="a3">
+            <span class="a31">
+                <span class="a311">作</span>
+                <span class="a312">品简介</span>
+            </span>
+            <span class="a32">
+                该网站将前端技术与平面设计结合展现作品集，作品包含电商设计整套案例、日常练习单图、包装物料设计、Logo设计、摄影作品及iPad手绘。
+
+            </span>
+        </div><!-- 作品简介 -->
+        <div class="a4">
+            <div class="a41">
+                <span class="a411">
+                    <ul class="a4111">
+                        <img class="imga4111"
+                            src="http://photogz.photo.store.qq.com/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqX9UtEO2uCuWqGe6NRtVGe4QfyH2*gsZlDZpALqeRgLNwAele7cf1ffB*WZdlaioISei3iKjbBumsvnZF429HGQ!/b&bo=uAO4AwAAAAADByI!&rf=viewer_4"
+                            alt="加载错误，请再试一次！">
+                    </ul>
+                </span>
+
+                <span class="a412">
+                    <ul class="a4121">
+                        <img class="imga41211"
+                            src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqSeUayEem63R1PJYnE85SIOAcsa0hgSZbQQw*AI9f7fROxmipLErZIN2WSc0LXF4fbZd38ooUBUIYdhEz2xUK9g!/b&bo=BwX7AQAAAAADB9o!&rf=viewer_4"
+                            alt="加载错误，请再试一次！">
+                    </ul>
+                    <ul class="a4122">
+                        姓名：ASCEN
+                    </ul>
+                    <ul class="a4123">
+                        25岁
+                    </ul>
+                </span>
+            </div>
+            <div class="a42">
+                <span class="a421">
+                    <ul class="a4211">01</ul>
+                    <ul class="a4212">●高中学历</ul>
+                    <ul class="a4213">在读：成人专科-建筑工程技术</ul>
+                    <ul class="a4214">自考本科：广告学当前已过8科</ul>
+                    <ul class="a4215">英语水平：22年成人高考英语131分</ul>
+                </span>
+                <span class="a422">
+                    <ul class="a4221">02</ul>
+                    <ul class="a4222">●热爱生活,学习力强</ul>
+                    <ul class="a4223">爱好：设计(平面、三维、室内)、编程(Html5、Python、Scrapy)摄影(曾自购Canon 80D、当前使用Nikon D90)</ul>
+                </span>
+            </div>
+        </div><!-- 个人简介-->
+
+        <div class="a5">
+            <ul class="a51">THANKS FOR WATCHING——</ul>
+            <ul class="a52">工作/学习经历&gt;&gt;</ul>
+            <ul class="a53">
+                <li class="a531">●</li>
+                <li class="a532">2023.05-至今</li>
+            </ul>
+            <ul class="a54">主要学习内容Cinema 4D、Keyshot渲染、前端(Html、Css、JavaScript)</ul>
+            <ul class="a54">相关理论知识储备:广告设计基础、广告媒体分析、广告法规管理</ul>
+            <ul class="a53">
+                <li class="a531">●</li>
+                <li class="a532">2020.01-2023.04</li>
+            </ul>
+            <ul class="a55">比亚迪股份有限公司&nbsp&nbsp&nbsp人事助理</ul>
+            <ul class="a54">维护员工档案（薪酬、奖罚、考勤、假期等），帮助实施人力资源政策与程序（调动、入职、离职、合同生成及续签），员工福利（福利假、社保、医保、工伤，节日安排）</ul>
+            <ul class="a53">
+                <li class="a531">●</li>
+                <li class="a532">2019.04-2019.12</li>
+            </ul>
+            <ul class="a55">盟信电子有限公司&nbsp&nbsp&nbsp美工</ul>
+            <ul class="a54">主要针对阿里巴巴国际站3c产品，店铺视觉设计（提炼卖点、制作主图、详情页、海报），宣传物料设计（包装设计、Logo 设计）、拍摄剪辑（产品及代加工厂视频图片拍摄）</ul>
+            <ul class="a53">
+                <li class="a531">●</li>
+                <li class="a532">2017.12-2019.03</li>
+            </ul>
+            <ul class="a55">比亚迪股份有限公司&nbsp&nbsp&nbsp统计员</ul>
+            <ul class="a54">收集和汇总生产数据并监督和复核其准确性，日报、周报、月报、季报、年报统计工作，参与生产协调和管理工作，协助生产进度、监控生产物料的使用和库存情况。</ul>
+            <ul class="a53">
+                <li class="a531">●</li>
+                <li class="a532">2014.09-2017.06</li>
+            </ul>
+            <ul class="a54" id="bt">江西省萍乡市安源中学 高中</ul>
+        </div><!-- 工作/学习经历 -->
+        <div class="a6">
+            <ul class="a61">星光不问赶路人，岁月不负有心人</ul>
+            <ul class="a62">星光不问赶路人，岁月不负有心人</ul>
+        </div><!-- 文字星光... -->
+        <div class="a7">
+            <span class="a71">
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/index.html"><img
+                        class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdKnYOfq*zUb1QAKha840yIbpL.8Z*dI21Up.jFmHFvX3TLwTZGToH0jUQ*Khyh0fiGQWJKqM1HooSNgCq.S9KQ!/b&bo=9wIDAgAAAAADF8Y!&rf=viewer_4"
+                        alt=""></a>
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/index.html"><img
+                        class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdKnYOfq*zUb1QAKha840yIbpL.8Z*dI21Up.jFmHFvX3TLwTZGToH0jUQ*Khyh0fiGQWJKqM1HooSNgCq.S9KQ!/b&bo=9wIDAgAAAAADF8Y!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a72">
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/shopping.html"><img
+                        class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqRhzRqW*zZdQivHVQ67OW397CY133uPKFpe02QEfUaZmcduNQrj*p1Y23s.LgORFYs.nbGj7voP5TPqvk5O*F60!/b&bo=QQQDAgAAAAADF3Y!&rf=viewer_4"
+                        alt=""></a>
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/shopping.html"><img
+                        class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVs6BucT4*92eQxtJDdEj9EoV1KzxxlG04sLx.t.pi*3dIU6iB.L0KQazk41HFtEjE7g5OZTnYWbsosM9IfF.hg!/b&bo=QQQDAgAAAAADB2Y!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a73">
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/practice.html"><img
+                        class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZdYc.BwLiVHWrwBf8OSb*XbSg3ZPZx*E2MOBdjDIcRZz7X8A0oGHYXE8YuiwyZPfMw1bEOh9tACAyaQ2YOS7*g!/b&bo=3ANTAgAAAAADF7w!&rf=viewer_4"
+                        alt=""></a>
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/practice.html"><img
+                        class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqXj5nxVGYVHMNchZXE1BIoVNe44ImiYlvdq9.bjHgia39arlRZTWztcPy.EY.g0WB91mazHuqJJghgHj4lWQpxo!/b&bo=3ANTAgAAAAADB6w!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+            <span class="a74">
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/others.html"><img
+                        class="imga711"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVDb3BPWA583SByAvTZyTmbv9dJFaY5SDflx.LhVlKybUsad6A3E3hhdWkbcgEZZH1tCNcOs1M4RQmH4kNahmUc!/b&bo=9AIDAgAAAAADF8U!&rf=viewer_4"
+                        alt=""></a>
+                <a
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/others.html"><img
+                        class="imga712"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZAV8g4Wn2ekAP*qMRYQMYUKACE7OqoNZpUIdLmgXB*SbBrnvjAAhc1HY1NCdbBfItg3qzu0f0JaG.ouyRCddmk!/b&bo=9AIDAgAAAAADF8U!&rf=viewer_4"
+                        alt=""></a>
+            </span>
+        </div><!-- 尾部置底 -->
+    </div>
+</body>
+
+<script>
+    /**屏幕自适应**/
+    function viewPort() {
+        const meta = document.querySelector('meta[name="viewport"]');
+        const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
+        meta.content = `width=device-width,initial-scale=${scale}`
+    }
+    viewPort()
+    window.onresize = viewPort;
+
+
+
+
+
+</script>
+
+</html>
