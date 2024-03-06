@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,537 +10,378 @@
     <link
         href="https://fonts.googlefonts.cn/css?family=Anton|Archivo+Black|Do+Hyeon|Oswald|Passion+One|Righteous|Roboto+Condensed|Russo+One|Teko"
         rel="stylesheet">
-    <title>ASCEN独创-E-COMMERCE</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            list-style: none;
-
-        }
-
-        .all {
-            float: left;
-            width: 750px;
-            height: auto;
-            background-color: #f5f5f5;
-        }
-
-
-
-        /** 头部置顶 **/
-        .a0 {
-            float: left;
-            height: 100px;
-            width: 750px;
-            background-color: #f5f5f5;
-            border-bottom: 5px solid #d6ff41;
-            margin: 0px 0px 0px 0px;
-            top: 0%;
-            left: 0%;
-            position: fixed;
-            z-index: 99;
-        }
-
-        .a0 .a01 .imga011 {
-            float: left;
-            height: auto;
-            width: 90px;
-            background-color: none;
-            margin: 5px 5px 0px 20px;
-            z-index: 99;
-        }
-
-        .a0 .a02 {
-            float: left;
-            height: 100px;
-            width: 275px;
-            background-color: none;
-            margin: 0px 0px 0px 0px;
-            z-index: 99;
-        }
-
-        .a0 .a02 .a021 {
-            display: flex;
-            height: 100px;
-            width: auto;
-            line-height: 100px;
-            font-size: 21px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            background-color: none;
-            margin: 0px 0px 0px 0px;
-            padding: 0px;
-            justify-content: center;
-            text-align: center;
-            z-index: 99;
-        }
-
-        .a0 .a03,
-        .a0 .a04 {
-            float: left;
-            height: 100px;
-            width: 180px;
-            background-color: none;
-            margin: 0px 0px 0px 0px;
-            padding: 0px 0px 0px 0px;
-            justify-content: center;
-            z-index: 100;
-        }
-
-        .a0 .a03 .a030,
-        .a0 .a04 .a040 {
-            display: block;
-            overflow: hidden;
-            z-index: 99;
-        }
-
-
-
-        .a0 .a03 .a030 .imga031,
-        .a0 .a04 .a040 .imga041 {
-
-            height: 80px;
-            width: auto;
-            background-color: none;
-            margin: 10px 0px 0px 0px;
-            z-index: 100;
-        }
-
-        .a0 .a03 .a030:hover .imga031,
-        .a0 .a04 .a040:hover .imga041 {
-            /*将图片向上偏移*/
-            transform: translateY(-100px);
-            /*绘制图片的阴影，并将阴影挪回原来位置。
-            drop-shadow参数含义颜色、x轴偏移量、y轴偏移量*/
-            filter: drop-shadow(#000000 0 100px);
-        }
-
-
-        /** 头部海报 **/
-
-        .a1 {
-            float: left;
-            height: auto;
-            width: 750px;
-            margin: 0px 0px 0px 0px;
-        }
-
-
-        .a1 .a101 .imga11 {
-            float: left;
-            height: auto;
-            width: 750px;
-            margin: 100px 0px 0px 0px;
-        }
-
-
-
-        /** 声明 **/
-
-        .b1 {
-            float: left;
-            background-color: rgba(0, 255, 255, 0);
-            width: 750px;
-            height: auto;
-            margin: 5px 0px 5px 0px;
-        }
-
-        .b11 {
-            float: left;
-            background-color: #7e8b4f00;
-            width: auto;
-            height: auto;
-            font-size: 30px;
-            font-weight: bolder;
-            margin: 5px 0px 5px 20px;
-        }
-
-        .b12 {
-            float: left;
-            background-color: #53631100;
-            width: auto;
-            height: auto;
-            font-size: 20px;
-            font-weight: normal;
-            margin: 15px 0px 5px 0px;
-        }
-
-        /** 产品展示 ↓ **/
-
-        .b2 {
-            float: left;
-            width: 750px;
-            height: auto;
-            background-color: rgba(127, 255, 212, 0);
-            padding: 0px 0px 0px 0px;
-            margin: 0px 0px 0px 0px;
-        }
-
-        .b21 {
-            float: left;
-            width: 690px;
-            height: auto;
-            background-color: rgba(109, 109, 109, 0);
-            padding: 30px;
-        }
-
-        .b211 {
-            float: left;
-            width: 350px;
-            height: auto;
-            background-color: rgba(119, 255, 128, 0);
-            padding: 0px 10px 0px 0px;
-            margin: 15px 0px 20px 0px;
-        }
-
-
-        .b2111 {
-            float: left;
-            width: auto;
-            height: auto;
-            background-color: rgba(69, 165, 75, 0);
-            padding: 0px 0px 10px 0px;
-            font-size: 42px;
-            font-family: 'Do Hyeon', sans-serif;
-            font-weight: bolder;
-            word-break: break-all
-        }
-
-        .b2112 {
-            float: left;
-            width: auto;
-            height: auto;
-            margin: 0px 0px 20px 0px;
-            background-color: rgba(250, 235, 215, 0);
-        }
-
-        .b112 {
-            float: left;
-            background-color: #d6ff4100;
-            width: auto;
-            height: auto;
-        }
-
-        .b21121 {
-            float: left;
-            width: auto;
-            height: 30px;
-            background-color: rgb(255, 255, 255);
-            padding: 9px;
-            font-size: 30px;
-            line-height: 30px;
-            font-weight: bold;
-            margin: 5px 0px 5px 0px;
-            border-radius: 5px;
-            border: 1px solid black;
-        }
-
-
-        .b21122 {
-            float: left;
-            width: 208px;
-            height: auto;
-            background-color: rgba(155, 65, 65, 0);
-            padding: 10px 10px 10px 10px;
-            font-size: 20px;
-            line-height: 20px;
-            font-weight: light;
-            word-break: break-all
-        }
-
-        .b2113 {
-            float: left;
-            width: auto;
-            height: auto;
-            background-color: rgb(255, 166, 0);
-            padding: 20px;
-
-
-            border-radius: 15px;
-            margin: 0px 50px 0px 60px;
-            box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.243);
-            transition: background-color 0.1s ease;
-            /* 设置背景颜色过渡效果为1秒 */
-
-        }
-
-
-
-        .b2113 a {
-            color: #ffffff;
-            font-size: 44px;
-            line-height: 44px;
-            font-weight: bolder;
-        }
-
-        .b2113:hover {
-            background-color: #8893ff;
-        }
-
-        .b212 {
-            float: left;
-            background-color: #ffffff00;
-            width: auto;
-            height: auto;
-        }
-
-        /**国外电商紫色框**/
-        .b2121 {
-            float: left;
-            background-color: rgba(255, 255, 255, 0);
-            width: 300px;
-            height: 300px;
-            border: 15px solid #8894ffa9;
-            border-radius: 50%;
-            position: relative;
-            right: 0px;
-            top: 0px;
-            animation: colorAnimation 0.2s infinite linear;
-            /* 将动画应用于元素，持续时间为4秒，无限循环，线性速度曲线 */
-        }
-
-        @keyframes colorAnimation {
-            0% {
-                border-color: rgb(123, 137, 255);
-            }
-
-            100% {
-                border-colorr: rgb(0, 238, 255);
-            }
-
-        }
-
-        /**国内电商绿色框**/
-        .bb2121 {
-            float: left;
-            background-color: rgba(255, 255, 255, 0);
-            width: 300px;
-            height: 300px;
-            border: 15px solid #d6ff41;
-            border-radius: 50%;
-            position: relative;
-            right: 0px;
-            top: 0px;
-            animation: color2Animation 0.2s infinite linear;
-            /* 将动画应用于元素，持续时间为4秒，无限循环，线性速度曲线 */
-        }
-
-        @keyframes color2Animation {
-            0% {
-                border-color: rgb(157, 255, 0);
-            }
-
-            100% {
-                border-colorr: rgb(255, 230, 0);
-            }
-
-        }
-
-        .imgb2121a {
-            float: left;
-            width: 300px;
-            height: auto;
-            background-color: rgba(233, 150, 122, 0);
-            position: relative;
-            right: 0px;
-            top: 0px;
-        }
-
-
-        /**底标**/
-        .d3 {
-            float: left;
-            width: auto;
-            height: auto;
-            margin: 0px 0px 130px 0px;
-        }
-
-        .d31 {
-            float: left;
-            width: 750px;
-            height: 70px;
-            background-color: #ffffff00;
-        }
-
-        .d311,
-        .d312 {
-            width: 100px;
-            height: auto;
-            background: none;
-            margin: 0px 0px 0px 0px;
-            position: relative;
-        }
-
-        .imgd31a,
-        .imgd31b {
-            float: left;
-            width: 120px;
-            background: none;
-            position: relative;
-            bottom: -10px;
-            left: 360px;
-            transition: 3s;
-            animation: rotate 10s linear infinite;
-            /* 设置动画属性 */
-        }
-
-        @keyframes rotate {
-
-            100% {
-                transform: rotate(360deg);
-            }
-
-        }
-
-
-
-        .d311 {
-            position: absolute;
-            filter: opacity(1);
-
-        }
-
-
-
-
-        .imgd32a {
-            float: left;
-            width: 750px;
-            background: none;
-            position: relative;
-            right: 30px;
-        }
-
-
-        .imgd31b:hover {
-            cursor: pointer;
-            transform: rotate(720deg)scale(1);
-            filter: opacity(1);
-        }
-
-
-
-
-
-
-        .d2-a {
-            float: left;
-            width: 650px;
-            height: auto;
-            padding: 0px 65px 0px 35px;
-            background-color: rgba(250, 235, 215, 0);
-        }
-
-        .d2-a a {
-            font-size: 40px;
-            color: #000000;
-            font-weight: bolder;
-
-            background-color: #8894ff00;
-        }
-
-        .d2-a1,
-        .d2-a3 {
-            margin: 0px 180px 0px 50px;
-        }
-
-        /** 置底导航 **/
-        .a7 {
-
-            height: 130px;
-            width: 750px;
-            background-color: #000000;
-            margin: 0px 0px 0px 0px;
-            bottom: 0%;
-            left: 0%;
-            position: fixed;
-            z-index: 99;
-            border-top: 5px solid #d6ff41;
-        }
-
-        .a71 {
-
-            height: 110px;
-            width: auto;
-            background-color: #ffffff;
-            margin: 0px 160px 0px 5px;
-            position: relative;
-            z-index: 99;
-        }
-
-        .a72 {
-
-            height: 110px;
-            width: auto;
-            background-color: #ffffff;
-            margin: 0px 230px 0px 0px;
-            position: relative;
-            z-index: 99;
-        }
-
-        .a73 {
-
-            height: 110px;
-            width: auto;
-            background-color: #ffffff;
-            margin: 0px 185px 0px 0px;
-            position: relative;
-            z-index: 99;
-        }
-
-        .a74 {
-
-            height: 110px;
-            width: auto;
-            background-color: #ffffff;
-            margin: 0px 200px 0px 0px;
-            position: absolute;
-            z-index: 99;
-        }
-
-        .a71 a,
-        .a72 a {
-            width: auto;
-            height: 110px;
-            background: none;
-            z-index: 99;
-        }
-
-        .a71 .imga711,
-        .a71 .imga712,
-        .a72 .imga711,
-        .a72 .imga712,
-        .a73 .imga711,
-        .a73 .imga712,
-        .a74 .imga711,
-        .a74 .imga712 {
-
-            height: 110px;
-            width: auto;
-            background-color: #000000;
-            margin: 0px 0px 0px 2px;
-            top: 0px;
-            left: 0px;
-            z-index: 99;
-            position: absolute;
-        }
-
-        .imga711:hover {
-            opacity: 0;
-        }
-
-        .imga712:hover {
-            opacity: 0;
-        }
-    </style>
-
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3881267_wfv3iyzbijg.css">
+    <title>ASCEN独创-Logo设计作品</title>
 
 </head>
+<style>
+    /**固定悬浮菜单**/
+    /** 头部置顶 **/
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .all {
+        float: left;
+        width: 750px;
+        height: auto;
+        background-color: #f5f5f5;
+    }
+
+    .a0 {
+        float: left;
+        height: 100px;
+        width: 750px;
+        background-color: #f5f5f5;
+        border-bottom: 5px solid #d6ff41;
+        margin: 0px 0px 0px 0px;
+        top: 0%;
+        left: 0%;
+        position: fixed;
+        z-index: 99;
+    }
+
+    .a01 {
+        float: left;
+        height: auto;
+        width: auto;
+        background-color: #8894ff00;
+
+    }
+
+    .a0 .a01 .imga011 {
+        float: left;
+        height: auto;
+        width: 90px;
+        background-color: none;
+        margin: 5px 5px 0px 20px;
+        z-index: 99;
+    }
+
+    .a0 .a02 {
+        float: left;
+        height: 100px;
+        width: 275px;
+        background-color: rgba(255, 0, 0, 0)(255, 255, 255);
+        margin: 0px 0px 0px 0px;
+        z-index: 99;
+
+    }
+
+    .a0 .a02 .a021 {
+        display: flex;
+        height: 100px;
+        width: auto;
+        line-height: 100px;
+        font-size: 21px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        background-color: rgba(255, 0, 0, 0);
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        justify-content: center;
+        text-align: center;
+        z-index: 99;
+    }
+
+    .a0 .a03,
+    .a0 .a04 {
+        float: left;
+        height: 100px;
+        width: 180px;
+        background-color: none;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        justify-content: center;
+        z-index: 100;
+    }
+
+    .a0 .a03 .a030,
+    .a0 .a04 .a040 {
+        display: block;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+
+
+    .a0 .a03 .a030 .imga031,
+    .a0 .a04 .a040 .imga041 {
+
+        height: 80px;
+        width: auto;
+        background-color: rgba(255, 0, 0, 0);
+        margin: 10px 0px 0px 0px;
+        z-index: 100;
+    }
+
+    .a0 .a03 .a030:hover .imga031,
+    .a0 .a04 .a040:hover .imga041 {
+        /*将图片向上偏移*/
+        transform: translateY(-100px);
+        /*绘制图片的阴影，并将阴影挪回原来位置。
+            drop-shadow参数含义颜色、x轴偏移量、y轴偏移量*/
+        filter: drop-shadow(#000000 0 100px);
+    }
+
+
+    /** 头部海报 **/
+
+    .a1 {
+        float: left;
+        height: auto;
+        width: 750px;
+        margin: 0px 0px 0px 0px;
+    }
+
+
+    .a1 .a101 .imga11 {
+        float: left;
+        height: auto;
+        width: 750px;
+        margin: 100px 0px 0px 0px;
+    }
+
+
+
+    /** 声明 **/
+
+    .d1 {
+        float: left;
+        background-color: rgba(0, 255, 255, 0);
+        width: 750px;
+        height: auto;
+        margin: 5px 0px 5px 0px;
+    }
+
+    .d11 {
+        float: left;
+        background-color: #7e8b4f00;
+        width: auto;
+        height: auto;
+        font-size: 30px;
+        font-weight: bolder;
+        margin: 5px 0px 5px 20px;
+    }
+
+    .d12 {
+        float: left;
+        background-color: #53631100;
+        width: auto;
+        height: auto;
+        font-size: 30px;
+        font-weight: normal;
+        margin: 5px 0px 5px 0px;
+    }
+
+
+    /**图片展示**/
+
+    .photograph {
+        float: left;
+        width: 750px;
+        height: auto;
+        margin: 0px 0px 10px 0px;
+        background-color: #d6ff41;
+        border-radius: 10px;
+    }
+
+    .photograph01 {
+        float: left;
+        width: 730px;
+        height: auto;
+        margin: 10px 10px 10px 10px;
+        background-color: #d6ff41;
+    }
+
+    .imgphotograph01 {
+        float: left;
+        width: 730px;
+        height: auto;
+    }
+
+    /**图片展示**/
+
+
+
+
+
+    .d3 {
+        float: left;
+        width: auto;
+        height: auto;
+        background-color: none;
+        margin: 0px 0px 130px 0px;
+    }
+
+    .d31 {
+        float: left;
+        width: 750px;
+        height: 70px;
+        background-color: #ffffff00;
+    }
+
+    .d311,
+    .d312 {
+        width: 100px;
+        height: auto;
+        background: none;
+        margin: 0px 0px 0px 0px;
+        position: relative;
+    }
+
+    .imgd31a,
+    .imgd31b {
+        float: left;
+        width: 120px;
+        background: none;
+        position: relative;
+        bottom: -10px;
+        left: 360px;
+        transition: 3s;
+        animation: rotate 10s linear infinite;
+        /* 设置动画属性 */
+    }
+
+    @keyframes rotate {
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    .d311 {
+        position: absolute;
+        filter: opacity(1);
+
+    }
+
+
+
+
+    .imgd32a {
+        float: left;
+        width: 750px;
+        background: none;
+        position: relative;
+        right: 30px;
+    }
+
+
+    .imgd31b:hover {
+        cursor: pointer;
+        transform: rotate(720deg)scale(1);
+        filter: opacity(1);
+    }
+
+
+
+
+
+
+    /** 置底导航 **/
+    .a7 {
+
+        height: 130px;
+        width: 750px;
+        background-color: #000000;
+        margin: 0px 0px 0px 0px;
+        bottom: 0%;
+        left: 0%;
+        position: fixed;
+        z-index: 99;
+        border-top: 5px solid #d6ff41;
+    }
+
+    .a71 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 160px 0px 5px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .a72 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 230px 0px 0px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .a73 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 185px 0px 0px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .a74 {
+
+        height: 110px;
+        width: auto;
+        background-color: #ffffff;
+        margin: 0px 200px 0px 0px;
+        position: absolute;
+        z-index: 99;
+    }
+
+    .a71 a,
+    .a72 a {
+        width: auto;
+        height: 110px;
+        background: none;
+        z-index: 99;
+    }
+
+    .a71 .imga711,
+    .a71 .imga712,
+    .a72 .imga711,
+    .a72 .imga712,
+    .a73 .imga711,
+    .a73 .imga712,
+    .a74 .imga711,
+    .a74 .imga712 {
+
+        height: 110px;
+        width: auto;
+        background-color: #000000;
+        margin: 0px 0px 0px 2px;
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+        position: absolute;
+    }
+
+    .imga711:hover {
+        opacity: 0;
+    }
+
+    .imga712:hover {
+        opacity: 0;
+    }
+
+    /**固定悬浮菜单**/
+
+
+
+    /**css动画样式 ↑ **/
+</style>
 
 <body>
+    <!-- html表格结构 ↓ -->
     <div class="all"><!-- 首页全局 -->
         <div class="a0"><!-- 头部置顶 -->
             <span class="a01">
@@ -549,12 +390,13 @@
                     alt="加载错误，请再试一次！">
             </span><!-- ascen图标 -->
             <span class="a02">
-                <ul class="a021">ASCEN个人作品集网页设计
+                <ul class="a021">
+                    ASCEN个人作品集网页设计
                 </ul>
             </span><!-- 文字个人作品集网页设计 -->
             <span class="a03">
                 <a class="a030"
-                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/index.html"><img
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/pack.html"><img
                         class="imga031"
                         src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqWCiBi1j23wH5JD1IaBxX0blXdqg*giw1.9gfmz6qLoG*61rcxUbnJcsAH.Yu1kLKeX6chDSOC7lCUH5vhA5Yrg!/b&bo=lAO4AQAAAAADBww!&rf=viewer_4"
                         alt="加载错误，请再试一次！"></a>
@@ -562,12 +404,14 @@
 
             <span class="a04">
                 <a class="a040"
-                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/play01.html"><img
+                    href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/index.html"><img
                         class="imga041"
                         src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqaSw2RllSPxvasMq6LOMgIawRGtfEX2Gfy**ARSbvdw*Xy0hEG4h1K07WyIYRu29cMJzw.XpRvjBui570AVfKZg!/b&bo=ogO1AQAAAAADFyc!&rf=viewer_4"
                         alt="加载错误，请再试一次！"></a>
             </span><!-- 下一页 -->
         </div>
+
+
         <div class="a1">
             <ul class="a101">
                 <img class="imga11"
@@ -579,101 +423,45 @@
             </ul>
 
         </div><!-- 头部海报 -->
-        <div class="b1">
-            <ul class="b11">
+        <div class="d1">
+            <ul class="d11">
                 注释：
             </ul>
 
-            <ul class="b12">
-                点击图片或链接查看相关产品整套电商设计(国外电商/国内电商)
+            <ul class="d12">
+                Logo设计相关作品
             </ul>
         </div><!-- 声明 -->
 
-        <!-- 产品展示 ↓ -->
-        <div class="b2">
-            <div class="b21"><!-- 第一个产品 -->
-                <span class="b211">
-                    <ul class="b2111">WIRELESS&nbspON-EAR&nbspHEADPHONES</ul>
-                    <ul class="b2112">
-                        <li class="b21121">
-                            $69.95
-                        </li>
-                        <li class="b21122">
-                            Original&nbspe-commerce&nbspdesign&nbspseries&nbspworks
-                        </li>
-                    </ul>
-                    <ul class="b2113">
-                        <a
-                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/play01.html">点击浏览</a>
-                    </ul>
-                </span>
-                <span class="b212">
-                    <ul class="b2121">
-                        <a
-                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/play01.html">
-                            <img class="imgb2121a"
-                                src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdGfbDmu4mTKBp46OUFBDWZPumtYy8orsbSPXyMm.Yklxrfhcr7YN5YDqWQozso*NR3km9396MjYhLXZtYTdC0A!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"
-                                alt="加载错误，请再试一次！">
-                        </a>
-                    </ul>
-                </span>
-            </div>
-            <div class="b21"><!-- 第二个产品 -->
-                <span class="b211">
-                    <ul class="b2111">ULTRASONIC&nbspJEWELRY&nbspCLEANER</ul>
-                    <ul class="b2112">
-                        <li class="b21121">
-                            $31.99
-                        </li>
-                        <li class="b21122">
-                            This is the real case from Amazon,learn more
-                        </li>
-                    </ul>
-                    <ul class="b2113">
-                        <a
-                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/play02.html">点击浏览</a>
-                    </ul>
-                </span>
-                <span class="b212">
-                    <ul class="b2121">
-                        <a
-                            href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/play02.html">
-                            <img class="imgb2121a"
-                                src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqUVzgwfX.v4*H10oF7Zpbj.f2SDkiyWw9OxOHYByl*EanS*U7FwpkeOy.IuKGTraKqY6gInglnbGmhQ3XmiQ2QE!/b&bo=OAQ4BAAAAAADR2I!&rf=viewer_4"
-                                alt="加载错误，请再试一次！">
-                        </a>
-                    </ul>
-                </span>
-            </div>
-            <div class="b21"><!-- 第三个产品 -->
-                <span class="b211">
-                    <ul class="b2111">料理机破壁机不锈钢 制图中...</ul>
-                    <ul class="b2112">
-                        <li class="b21121">
-                            ¥159
-                        </li>
-                        <li class="b21122">
-                            该系列图正在制作中，无需点击，国内电商
-                        </li>
-                    </ul>
-                    <ul class="b2113">
-                        <a href="">点击浏览</a>
-                    </ul>
-                </span>
-                <span class="b212">
-                    <ul class="bb2121">
-                        <a href="">
-                            <img class="imgb2121a"
-                                src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqdkTj*SJs0BlLgJW59II*HlDUpLD10cT4nbvi5.qI5h9*yiHRT9Nf2cyMDY.4LMRCASPOLQKx2tz8kzX7RltOes!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"
-                                alt="加载错误，请再试一次！">
-                        </a>
-                    </ul>
-                </span>
-            </div>
-        </div>
-        <!-- 产品展示 ↑ -->
-        <!-- 底标 ↓ -->
+        <div class="photograph">
+            <ul class="photograph01">
+                <img class="imgphotograph01"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqciIJxSxbi08yZ0FlWr9hF.ndZRAq4ZLY79i*JuVVS8q19ubVTcv5AzGruOVc7b.C2cd3iF6gn2Pw4cp4zSUvYc!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </ul>
+            <ul class="photograph01">
+                <img class="imgphotograph01"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqX9MbLBwgD.cULzXB*YvYJHEmMjupTbk2MBov4RoZxy7A7U2MzW56jYabPcBMv9RsLytOecWor.sNHbCP1goUhE!/b&bo=OAQ4BAAAAAABByA!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </ul>
+            <ul class="photograph01">
+                <img class="imgphotograph01"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqa.5aH7gQpiP7okzGLuvqxr6cd*JjxEhc*GMrEwC5nDeFf108ZUGkYQzcLOX2LiTCG4oM.21p7AuXgKOzSIdHo8!/b&bo=OARbBAAAAAADF1E!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </ul>
+            <ul class="photograph01">
+                <img class="imgphotograph01"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqevLzbv5LMFbIqZKOaZvCQuNjF6GbAnXI03q*5hQkNonFmiMn99WkWMA2zV8etu0U3y9fWHbxXgjI6IeqdxuoaQ!/b&bo=6QPpAwAAAAABByA!&rf=viewer_4"
+                    alt="加载错误，请再试一次！">
+            </ul>
 
+        </div>
+
+
+
+
+
+        <!-- 底标 ↓ -->
         <div class="d3">
             <ul class="d31">
                 <li class="d311">
@@ -690,13 +478,12 @@
             <ul class="d32">
 
                 <img class="imgd32a"
-                    src="http://photogz.photo.store.qq.com/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqXhcgNDJZRvQyl3J9s0FDirkEXXRiYiApGTsQvr23HyKee0*9mjVT0UJ1wc*eiBbMtUmfv3tAs6fctb.tsibkdc!/b&bo=aAdrAwAAAAADNxU!&rf=viewer_4"
+                    src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZ*uQPbdNTgHjzVLawmPeLgNZidpTymDK9r8gWZjPIu7aJN9PzZui319hDfXPheocrDaAGFS00mNxXdnht4t6e0!/b&bo=aAdqAwAAAAADNxQ!&rf=viewer_4"
                     alt="加载错误，请再试一次！">
 
             </ul>
-
         </div>
-        <!-- 尾部置底 ↓ -->
+
         <div class="a7">
             <span class="a71">
                 <a
@@ -719,7 +506,7 @@
                 <a
                     href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/shopping.html"><img
                         class="imga712"
-                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqRhzRqW*zZdQivHVQ67OW397CY133uPKFpe02QEfUaZmcduNQrj*p1Y23s.LgORFYs.nbGj7voP5TPqvk5O*F60!/b&bo=QQQDAgAAAAADF3Y!&rf=viewer_4"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVs6BucT4*92eQxtJDdEj9EoV1KzxxlG04sLx.t.pi*3dIU6iB.L0KQazk41HFtEjE7g5OZTnYWbsosM9IfF.hg!/b&bo=QQQDAgAAAAADB2Y!&rf=viewer_4"
                         alt=""></a>
             </span>
             <span class="a73">
@@ -743,26 +530,166 @@
                 <a
                     href="https://htmlpreview.github.io/?https://github.com/Ascen01/Ascen01.github.io/blob/main/others.html"><img
                         class="imga712"
-                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZAV8g4Wn2ekAP*qMRYQMYUKACE7OqoNZpUIdLmgXB*SbBrnvjAAhc1HY1NCdbBfItg3qzu0f0JaG.ouyRCddmk!/b&bo=9AIDAgAAAAADF8U!&rf=viewer_4"
+                        src="http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVDb3BPWA583SByAvTZyTmbv9dJFaY5SDflx.LhVlKybUsad6A3E3hhdWkbcgEZZH1tCNcOs1M4RQmH4kNahmUc!/b&bo=9AIDAgAAAAADB9U!&rf=viewer_4"
                         alt=""></a>
             </span>
-        </div><!-- 尾部置底 ↑ -->
-    </div>
+        </div><!-- 尾部置底 -->
+        <!-- html表格结构 ↑ -->
+        <!-- js功能部分 ↓  -->
+        <script>
+
+            /**屏幕自适应**/
+            function viewPort() {
+                const meta = document.querySelector('meta[name="viewport"]');
+                const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
+                meta.content = `width=device-width,initial-scale=${scale}`
+            }
+            viewPort()
+            window.onresize = viewPort;
+
+
+            //**轮播图**/
+            /**  需求：
+                 *  1、自动切换图片
+                    2、鼠标移入，图片暂停，移出，图片恢复轮播
+                    3、左右两个按钮，点击可以切换上一张或下一张
+                    4、下面的四个小圆点会随图片变颜色
+                    5、小圆点可以点击并切换到对应的图片上
+                */
+
+            //获取把圆点节点放置的盒子节点，即p节点
+            let pEle = document.getElementsByTagName("p")[0];
+            //获取事件代理的父元素section
+            let secEle = document.getElementsByTagName("section")[0];
+
+            let imgArr = ["http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqY4mgi85eEFiVkoXf088H9ROy7rp8Nmhc3eFcLA5men4gPQdfcVLOVoyv5QyvK*K6ITY6w0DlsFBfBhVCJ*4Dgw!/b&bo=xQQ4BAAAAAADB98!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqXNeK2.SGqzk5BKfAgCF2TF9zBpEEepjvjYXM5048NOmbyQGln80m.OFTJNb9hSIpcDixYlUgrsQyog6vpyD6Us!/b&bo=xQQ4BAAAAAADZ78!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqVInsUzoO1LUIiySfvkstq5mT*kaMXfqm5Sx4uwXf9ASMDcdzlBra7ZZOd8BiCTLG3MVy77rxgtWSeOovUSAa.I!/b&bo=xQQ4BAAAAAADd68!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqUJhGM0mrRvRqnR0gtoYmiOOeRYkuO5GjIkSr48r*PDxauHXXW1F4od43mipS0mqnmpPJjsDbMzHsXT5DwLqOCc!/b&bo=xQQ4BAAAAAADZ78!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqWlgG29H.kdRsqzqmT0jxTHZARI*0Iyotp3j32uRAVdOegGLkDOtbIQV9rbaR9Wogp81LK5mdjN3eZXKcArNRHs!/b&bo=OAQ4BAAAAAADByI!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqRLZHJMhihtazC1si6zIm1UZUNAjfw03*cdCzEnLkLFrsxHyOiXJyBIxGsD9536V7UtuYjC1YuKtKNCTZ8MBBmQ!/b&bo=OAQ4BAAAAAADNxI!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqSOZ6wtG0cEqVHMJrIAXwVSrB9qY4t1vIiAL0CuC*xQWr0LZNeSSX*gKXN.lHiCE9au7eVSk9rysS5SVIPsjh48!/b&bo=OAQ4BAAAAAADR2I!&rf=viewer_4",
+                "http://m.qpic.cn/psc?/V53BpvCq2iUIg74Hgx0a0qQZK84G59Fn/bqQfVz5yrrGYSXMvKr.cqZdzGGw8yI5JLNLv8L3DCMrQeSdPh60jb1Gbr.8Klbx9AMIKWuuqXMB3BVttfFJudunTqTwL.mB5dflbPZkAFjs!/b&bo=OAQ4BAAAAAADNxI!&rf=viewer_4",
+            ] //获取时间函数的起始下标
+            let i = 0;
+            //图片有多少张，就传几个参进去，并且接收这个返回的数组
+            let cirArr = creatCircle(imgArr.length);
+            //遍历cirArr数组，将圆点添加进它的父节点p节点中
+            cirArr.forEach(node => pEle.appendChild(node));
+
+            //获取所有的圆点节点
+            let iEle = document.getElementsByTagName("i");
+
+            //给每一个圆点添加上自定义属性，并赋上下标
+            for (let k = 0; k < iEle.length; k++) {
+                iEle[k].dataset.index = k;
+            }
+
+            let timer;
+
+            //轮播：时间函数，1秒自动换一张
+            function playTime() {
+                timer = setInterval(() => {
+                    //循环展示图片
+                    i++;
+
+                    //如果已经跳到最后一张，就再次回到第一张
+                    if (i > imgArr.length - 1) {
+                        i = 0;
+                    }
+
+                    //给圆点添加样式，开始运行该函数
+                    addStyleI(i);
+                    //图片标签地址（src属性）
+                    img.src = imgArr[i];
+                }
+
+                    , 1000);
+            }
+
+            playTime();
+
+            // 鼠标移入，图片暂停
+            secEle.addEventListener("mouseenter", function () {
+                clearInterval(timer);
+                timer = null;
+            });
+            // 鼠标移出，图片恢复滚动
+            secEle.addEventListener("mouseleave", playTime);
+
+            //给父节点绑定一个事件代理，点击左右按钮切换图片
+            secEle.addEventListener("click", function (e) {
+                let event = e || window.event;
+
+                //点击左右按钮切换图片
+                if (event.target.className == "left iconfont icon-anniu_jiantouxiangzuo") {
+                    i--;
+                }
+
+                if (event.target.className == "right iconfont icon-anniu-jiantouxiangyou") {
+                    i++;
+                }
+
+                if (i < 0) {
+                    i = imgArr.length - 1;
+                }
+
+                if (i == imgArr.length) {
+                    //3
+                    i = 0;
+                }
+
+                img.src = imgArr[i];
+                addStyleI(i);
+
+                //点击小圆点可以切换到对应的图片上
+                if (event.target.nodeName == "I"
+                ) {
+                    console.log("11111");
+                    //获得点击的圆点的自定义索引值
+                    cirI = event.target.dataset.index;
+                    //替换图片
+                    img.src = imgArr[cirI];
+                    //更改圆点样式
+                    addStyleI(cirI);
+                    //每当点击小圆点，i的值就会被赋成圆点下标的值
+                    i = cirI;
+                }
+            });
+
+            //暂停图片滚动
+            function picScroll() {
+                clearInterval(timer);
+            }
+
+            //生成圆点
+            function creatCircle(num) {
+                //创建一个空数组来接收这个圆点
+                let iArr = [];
+
+                for (let j = 0; j < num; j++) {
+                    //新增圆点节点
+                    let circleNode = document.createElement("i");
+                    //再把新增的圆点节点放进圆点数组中
+                    iArr.push(circleNode);
+                }
+
+                //完成后，返回该数组
+                return iArr;
+            }
+
+            //给圆点添加样式
+            function addStyleI(index) {
+                //圆点的默认颜色是灰色
+                [...iEle].forEach(node => node.style.backgroundColor = "#8893ff");
+                //当跳到该图片时，圆点变成白色
+                iEle[index].style.backgroundColor = "#d6ff41";
+            }
+
+
+
+        </script>
+        <!-- js功能部分 ↑  -->
 </body>
-
-<script>
-    /**屏幕自适应**/
-    function viewPort() {
-        const meta = document.querySelector('meta[name="viewport"]');
-        const scale = window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
-        meta.content = `width=device-width,initial-scale=${scale}`
-    }
-    viewPort()
-    window.onresize = viewPort;
-    //
-
-
-
-</script>
 
 </html>
